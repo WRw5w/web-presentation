@@ -1,0 +1,53 @@
+flowchart TD
+    A["最开始的三种系统架构设想"]
+
+    A --> S1
+    A --> S2
+    A --> S3
+
+    subgraph S1["方案一：单 Agent"]
+        direction TB
+        S1A["一个 Agent"]
+        S1B["训练 / 打榜 / 改代码 / 检查结果"]
+        S1A --> S1B --> S1A
+    end
+
+    subgraph S2["方案二：父 Agent + Subagent"]
+        direction TB
+        S2A["父 Agent<br/>负责总体目标与决策"]
+        S2B["远程训练 Subagent"]
+        S2C["打榜 / 提交 Subagent"]
+        S2D["Recode Subagent"]
+        S2E["结果回报父 Agent"]
+
+        S2A --> S2B
+        S2A --> S2C
+        S2A --> S2D
+        S2B --> S2E
+        S2C --> S2E
+        S2D --> S2E
+        S2E --> S2A
+    end
+
+    subgraph S3["方案三：Agent Team（并发协作）"]
+        direction TB
+
+        S3A["共享任务目标<br/>共享状态"]
+        S3B["训练 Agent"]
+        S3C["打榜 Agent"]
+        S3D["探索 Agent"]
+        S3E["代码 / Recode Agent"]
+        S3F["汇总结果<br/>更新共享状态"]
+        S3G["指挥 Agent<br/>并行观察、协调与调整"]
+
+        S3A --> S3B
+        S3A --> S3C
+        S3A --> S3D
+        S3A --> S3E
+        S3B --> S3F
+        S3C --> S3F
+        S3D --> S3F
+        S3E --> S3F
+        S3F --> S3A
+        S3A <-.读取状态 / 协调.-> S3G
+    end

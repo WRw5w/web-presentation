@@ -1,0 +1,15 @@
+flowchart LR
+    subgraph A["起点"]
+        direction TB
+        A1["基础不太好"]
+        A2["要打一个 Kaggle-like 的比赛"]
+        A3["王老师的 idea"]
+    end
+
+    A --> B["自动训练 / 刷 Kaggle"]
+    B --> C["MLE-bench"]
+    C --> D["大多闭源"]
+    D --> E["手搓实现"]
+
+    E --> F["learning Claude Code"]
+    F --> G["理解 Agent Loop"]

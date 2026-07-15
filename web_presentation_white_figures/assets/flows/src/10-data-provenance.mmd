@@ -1,0 +1,41 @@
+flowchart TB
+    subgraph S1["A · 真实轨迹采集"]
+        direction LR
+        T["MLE-bench<br/><b>26 个任务</b><br/>任务描述 + 训练数据"]
+        A["AIDE / AutoMind<br/><b>ML Agent</b>"]
+        X["真实环境执行<br/>训练 / 验证"]
+        R["轨迹记录<br/>代码 + 执行结果"]
+        T --> A --> X --> R
+        R -. 反馈写回 .-> A
+    end
+
+    subgraph S2["B · 筛选、组合与增强"]
+        direction LR
+        V["有效方案<br/><b>1,329</b>"]
+        F["专家在环<br/>剪枝 + 去重"]
+        I["筛选实例<br/><b>895</b>"]
+        P["同任务方案配对<br/><b>18,438 pairs</b>"]
+        D["可信数据报告<br/>Profiling → Verification → Verbalization"]
+        V --> F --> I --> P --> D
+    end
+
+    subgraph S3["C · 偏好任务与搜索应用"]
+        direction LR
+        Q["任务描述 + 数据报告<br/>候选方案 A / B"]
+        L["LLM Pairwise Judge<br/>答案 + 置信度"]
+        G["ForeAgent<br/><b>Predict-then-Verify</b>"]
+        K["低置信保留<br/>高置信排序 → Top-k"]
+        E["真实执行验证<br/>结果写回 Journal"]
+        Q --> L --> G --> K --> E
+        E -. 新证据 .-> G
+    end
+
+    R ==> V
+    D ==> Q
+
+    classDef source fill:#eef2ff,stroke:#6d56d3,stroke-width:2px,color:#172033;
+    classDef evidence fill:#ecfdf5,stroke:#0f8a6a,stroke-width:2px,color:#172033;
+    classDef action fill:#fff7ed,stroke:#ea6b63,stroke-width:2px,color:#172033;
+    class T,A,Q,L source;
+    class X,R,V,F,I,P,D,E evidence;
+    class G,K action;
