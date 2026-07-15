@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" role="img" aria-labelledby="title desc">
+  <title id="title">论文证据审计总图</title>
+  <desc id="desc">前半段提出 ForeAgent，后半段依次审计预测信号、能力边界和系统收益，最后决定如何接回项目。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity=".08"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#8291a5"/></marker>
+    <style>
+      text{font-family:"Microsoft YaHei UI","Microsoft YaHei",sans-serif;fill:#0f172a}
+      .mono{font-family:"Cascadia Mono","Consolas",monospace;letter-spacing:1.7px}
+      .muted{fill:#64748b}.small{font-size:14px}.label{font-size:13px;font-weight:700}.title{font-size:25px;font-weight:700}.body{font-size:16px}.big{font-size:30px;font-weight:750}
+      .line{fill:none;stroke:#8291a5;stroke-width:2}.dash{stroke-dasharray:7 7}
+    </style>
+  </defs>
+
+  <rect x="28" y="20" width="1384" height="88" rx="16" fill="#f8fafc" stroke="#cbd5e1"/>
+  <rect x="28" y="20" width="9" height="88" rx="4" fill="#0f172a"/>
+  <text x="62" y="50" class="mono label" fill="#6d5bd0">FROM THE FIRST HALF</text>
+  <text x="62" y="82" class="title">前半段已经提出 ForeAgent；后半段不再重复算法，而是审计它是否值得相信</text>
+  <text x="1376" y="62" text-anchor="end" class="mono small muted">PROBLEM → EVIDENCE → BOUNDARY → DECISION</text>
+
+  <path d="M720 108V136" class="line"/>
+  <path d="M720 136H252V160" class="line" marker-end="url(#arrow)"/>
+  <path d="M720 136V160" class="line" marker-end="url(#arrow)"/>
+  <path d="M720 136H1188V160" class="line" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="52" y="160" width="400" height="238" rx="18" fill="#faf8ff" stroke="#b9aff0"/>
+    <rect x="52" y="160" width="400" height="7" rx="3" fill="#6d5bd0"/>
+  </g>
+  <circle cx="92" cy="208" r="22" fill="#6d5bd0"/>
+  <text x="92" y="214" text-anchor="middle" font-size="17" font-weight="750" fill="#ffffff">01</text>
+  <text x="126" y="214" class="title">预测信号存在吗？</text>
+  <text x="82" y="258" class="body muted">真实执行轨迹提供标签</text>
+  <path d="M82 277H422" stroke="#ddd7f8"/>
+  <text x="82" y="310" class="body">随机 50.0% · 复杂度启发式 50.8%</text>
+  <text x="82" y="350" class="big" fill="#6d5bd0">61.5%</text>
+  <text x="196" y="350" class="body">DeepSeek-V3.2-Thinking</text>
+  <text x="82" y="380" class="small muted">结论：信号弱，但显著不是随机噪声</text>
+
+  <g filter="url(#shadow)">
+    <rect x="520" y="160" width="400" height="238" rx="18" fill="#f4faff" stroke="#8fc7e2"/>
+    <rect x="520" y="160" width="400" height="7" rx="3" fill="#0369a1"/>
+  </g>
+  <circle cx="560" cy="208" r="22" fill="#0369a1"/>
+  <text x="560" y="214" text-anchor="middle" font-size="17" font-weight="750" fill="#ffffff">02</text>
+  <text x="594" y="214" class="title">能力边界在哪里？</text>
+  <text x="550" y="258" class="body">Pairwise 可用 · 全局排序迅速退化</text>
+  <path d="M550 277H890" stroke="#cfe6f2"/>
+  <text x="550" y="310" class="body">N=2 Accuracy@1</text>
+  <text x="860" y="310" text-anchor="end" class="big" fill="#0369a1">61.3%</text>
+  <text x="550" y="350" class="body">N=5 Accuracy@1</text>
+  <text x="860" y="350" text-anchor="end" class="big" fill="#be123c">31.1%</text>
+  <text x="550" y="380" class="small muted">结论：只做局部比较，并使用置信度门控</text>
+
+  <g filter="url(#shadow)">
+    <rect x="988" y="160" width="400" height="238" rx="18" fill="#f4fcf8" stroke="#8bcbb5"/>
+    <rect x="988" y="160" width="400" height="7" rx="3" fill="#047857"/>
+  </g>
+  <circle cx="1028" cy="208" r="22" fill="#047857"/>
+  <text x="1028" y="214" text-anchor="middle" font-size="17" font-weight="750" fill="#ffffff">03</text>
+  <text x="1062" y="214" class="title">系统收益成立吗？</text>
+  <text x="1018" y="258" class="body muted">预算先换成探索，再换成结果</text>
+  <path d="M1018 277H1358" stroke="#d1ede3"/>
+  <text x="1018" y="318" class="big" fill="#047857">6×</text>
+  <text x="1090" y="318" class="body">收敛加速</text>
+  <text x="1205" y="318" class="big" fill="#047857">3.2×</text>
+  <text x="1308" y="318" class="body">节点</text>
+  <text x="1018" y="360" class="big" fill="#047857">+4.4 pp</text>
+  <text x="1135" y="360" class="body">平均 Beat Ratio · 相对 +6.3%</text>
+  <text x="1018" y="386" class="small muted">结论：执行预算转化为可观察的 Agent 收益</text>
+
+  <path d="M252 398V432M720 398V432M1188 398V432M252 432H1188" class="line"/>
+  <path d="M720 432V450" class="line" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="250" y="450" width="900" height="84" rx="17" fill="#ffffff" stroke="#94a3b8"/>
+    <rect x="250" y="450" width="10" height="84" rx="4" fill="#c3922f"/>
+  </g>
+  <text x="286" y="482" class="mono label" fill="#a16207">OUR INTEGRATION DECISION</text>
+  <text x="286" y="514" class="title">只接入 Improve · 只分配执行预算 · 真实 evaluator 保留最终裁决权</text>
+  <rect x="1170" y="466" width="210" height="52" rx="26" fill="#f0fdf7" stroke="#86cdb5"/>
+  <text x="1275" y="498" text-anchor="middle" class="body" font-weight="700" fill="#047857">Predict → Verify → Journal</text>
+</svg>
