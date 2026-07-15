@@ -1,41 +1,71 @@
 flowchart TB
-    subgraph S1["A · 真实轨迹采集"]
+    subgraph ROW1[" "]
         direction LR
-        T["MLE-bench<br/><b>26 个任务</b><br/>任务描述 + 训练数据"]
-        A["AIDE / AutoMind<br/><b>ML Agent</b>"]
-        X["真实环境执行<br/>训练 / 验证"]
-        R["轨迹记录<br/>代码 + 执行结果"]
-        T --> A --> X --> R
-        R -. 反馈写回 .-> A
+        subgraph A["A · Trajectory Collection｜真实轨迹采集"]
+            direction LR
+            A1["MLE-bench<br/><b>26 个任务</b><br/>任务描述 + 训练数据"]
+            A2["AIDE / AutoMind<br/><b>ML Agent</b>"]
+            A3["环境执行<br/>代码 → 训练 / 验证"]
+            A4["轨迹记录<br/>代码 + Execution Result"]
+            A1 --> A2 --> A3 --> A4
+            A4 -. 结果反馈 .-> A2
+        end
+
+        subgraph B["B · Filtering & Combining｜筛选与组合"]
+            direction LR
+            B1["有效方案<br/><b>1,329</b>"]
+            B2["专家在环<br/>剪枝 + 去重"]
+            B3["筛选实例<br/><b>895</b>"]
+            B4["同任务两两组合<br/><b>18,438 pairs</b>"]
+            B1 --> B2 --> B3 --> B4
+        end
     end
 
-    subgraph S2["B · 筛选、组合与增强"]
+    subgraph ROW2[" "]
         direction LR
-        V["有效方案<br/><b>1,329</b>"]
-        F["专家在环<br/>剪枝 + 去重"]
-        I["筛选实例<br/><b>895</b>"]
-        P["同任务方案配对<br/><b>18,438 pairs</b>"]
-        D["可信数据报告<br/>Profiling → Verification → Verbalization"]
-        V --> F --> I --> P --> D
+        subgraph C["C · Augmentation｜数据报告增强"]
+            direction LR
+            C1["训练数据 + 代码"]
+            C2["① Profiling<br/>数据与方案画像"]
+            C3["② Verification<br/>执行日志 + 专家检查"]
+            C4["③ Verbalization<br/><b>Verified Data Report</b>"]
+            C1 --> C2 --> C3 --> C4
+        end
+
+        subgraph D["D · Task Definition｜偏好任务定义"]
+            direction LR
+            D1["任务描述"]
+            D2["可信数据报告"]
+            D3["候选代码 C₀ / C₁"]
+            D4["LLM Pairwise Judge<br/>答案 ŷ + 置信度 c"]
+            D1 --> D4
+            D2 --> D4
+            D3 --> D4
+        end
     end
 
-    subgraph S3["C · 偏好任务与搜索应用"]
+    subgraph E["E · ForeAgent Application｜预测后验证"]
         direction LR
-        Q["任务描述 + 数据报告<br/>候选方案 A / B"]
-        L["LLM Pairwise Judge<br/>答案 + 置信度"]
-        G["ForeAgent<br/><b>Predict-then-Verify</b>"]
-        K["低置信保留<br/>高置信排序 → Top-k"]
-        E["真实执行验证<br/>结果写回 Journal"]
-        Q --> L --> G --> K --> E
-        E -. 新证据 .-> G
+        E1["并行生成<br/><b>M 个候选方案</b>"]
+        E2["ForeAgent 预测<br/>Pairwise 排序 + 置信度"]
+        E3["过滤低置信结果<br/>选择 Top-k"]
+        E4["真实执行验证<br/><b>Execution Result × k</b>"]
+        E5["结果写回 Journal<br/>进入下一轮搜索"]
+        E1 --> E2 --> E3 --> E4 --> E5
+        E5 -. 新证据反馈 .-> E2
     end
 
-    R ==> V
-    D ==> Q
+    A4 ==> B1
+    B4 ==> C1
+    C4 ==> D2
+    D4 ==> E2
+
+    style ROW1 fill:transparent,stroke:transparent
+    style ROW2 fill:transparent,stroke:transparent
 
     classDef source fill:#eef2ff,stroke:#6d56d3,stroke-width:2px,color:#172033;
     classDef evidence fill:#ecfdf5,stroke:#0f8a6a,stroke-width:2px,color:#172033;
     classDef action fill:#fff7ed,stroke:#ea6b63,stroke-width:2px,color:#172033;
-    class T,A,Q,L source;
-    class X,R,V,F,I,P,D,E evidence;
-    class G,K action;
+    class A1,A2,D1,D2,D3 source;
+    class A3,A4,B1,B2,B3,B4,C1,C2,C3,C4,E4,E5 evidence;
+    class D4,E1,E2,E3 action;
