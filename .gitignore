@@ -1,0 +1,9 @@
+# generated and temporary outputs
+tmp/
+**/tmp/
+node_modules/
+*.log
+# local editor/system files
+.vscode/
+.DS_Store
+Thumbs.db
