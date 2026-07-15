@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>Auto Research × ForeAgent｜组会汇报（白色版）</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="white-theme.css">
+</head>
+<body>
+  <div class="deck-shell" id="deck-shell">
+    <main class="deck" id="deck" aria-live="polite">
+
+      <!-- 01 / INSTITUTION COVER -->
+      <section class="slide institution-cover active" data-section="00 / TITLE" data-title="西南石油大学组会汇报" data-clean="true">
+        <div class="institution-accent" aria-hidden="true"></div>
+        <header class="institution-header">
+          <div class="swpu-wordmark" aria-label="西南石油大学">
+            <img class="swpu-official-logo" src="assets/swpu-official-logo.png" alt="西南石油大学官方校标">
+          </div>
+          <div class="institution-type mono"><span>GROUP MEETING</span><b>2026</b></div>
+        </header>
+        <div class="institution-title-block" data-audit-bound>
+          <p class="institution-kicker mono">AUTO RESEARCH × FOREAGENT</p>
+          <h1><span>从自动刷榜</span><em>到</em><span>执行前预测</span></h1>
+          <p class="institution-title-en">From Automated Leaderboard Optimization to Pre-Execution Prediction</p>
+          <p class="institution-subtitle">一个证据驱动的机器学习实验系统，如何从 Agent Loop 走向 ForeAgent</p>
+        </div>
+        <div class="institution-divider" aria-hidden="true"></div>
+        <div class="institution-details" data-audit-bound>
+          <div><span>汇报人</span><strong>张程晰</strong></div>
+          <div><span>指导教师</span><strong>王志文</strong></div>
+          <div class="institution-email"><span>邮箱 / EMAIL</span><strong>3183879036@qq.com</strong></div>
+          <div><span>单位</span><strong>西南石油大学</strong></div>
+          <div><span>日期</span><strong>2026 年 7 月</strong></div>
+        </div>
+        <svg class="institution-skyline" viewBox="0 0 1600 260" aria-hidden="true">
+          <path d="M0 224H1600M90 224V176H220V224M128 176V136H182V176M390 224V162H478V224M412 162V124H455V162M612 224V190H770V224M654 190V150H724V190M936 224V168H1060V224M976 168V116H1020V168M1200 224V184H1324V224M1232 184V142H1290V184"/>
+          <path d="M1324 224L1410 62L1496 224M1360 224L1410 130L1460 224M1410 62V224M1382 116H1438M1358 162H1462"/>
+          <path d="M1410 62C1444 40 1474 42 1504 58" class="skyline-signal"/>
+        </svg>
+        <div class="institution-page mono">SWPU · 01</div>
+      </section>
+
+      <!-- 02 / STORY COVER -->
+      <section class="slide slide-cover" data-section="00 / OPENING" data-title="从自动刷榜到执行前预测" data-clean="true">
+        <div class="cover-grid" aria-hidden="true"></div>
+        <div class="cover-signal signal-a"></div>
+        <div class="cover-signal signal-b"></div>
+        <div class="slide-body cover-body" data-audit-bound>
+          <div class="cover-meta mono">AUTO RESEARCH · GROUP MEETING · 2026</div>
+          <div class="cover-rule"></div>
+          <h1 class="cover-title"><span>从自动刷榜</span><span class="cover-arrow">到</span><span class="accent-reasoning">执行前预测</span></h1>
+          <p class="cover-subtitle">一个证据驱动的机器学习实验系统，如何从 Agent Loop 走向 ForeAgent</p>
+          <p class="cover-presenter"><span>西南石油大学</span><i></i><strong>张程晰</strong></p>
+          <div class="cover-path" aria-label="演讲主线">
+            <span>长期运行</span><i></i><span>多 Agent 协作</span><i></i><span>真实执行</span><i></i><span>候选预筛选</span>
+          </div>
+        </div>
+        <div class="cover-mark mono">AR / 01</div>
+      </section>
+
+      <!-- 03 / SCORE -->
+      <section class="slide slide-score official-score-slide" data-section="01 / RESULT" data-title="公开榜单第二：先把结果立住">
+        <div class="slide-body official-score-layout" data-audit-bound>
+          <div class="score-story">
+            <p class="eyebrow evidence-text">OFFICIAL LEADERBOARD · 2026-07-12</p>
+            <div class="rank-lockup"><span class="hash">#</span><span class="rank">02</span></div>
+            <h2>公开榜单第二名</h2>
+            <p>团队 <b>swpu_1</b>，官方榜单分数 <b class="evidence-text">78.2313</b>。我先把结果放在最前面，因为后面讲的系统问题，都是为了让这种结果可重复地产生。</p>
+          </div>
+          <figure class="leaderboard-composition">
+            <div class="leaderboard-window">
+              <img src="../materials/images/05_official_leaderboard_20260712.png" alt="官方榜单截图">
+              <span class="rank-two-frame"></span>
+            </div>
+            <figcaption><span>官方截图保留赛事标题、榜单表头与前三名</span><b>第二名 · swpu_1 · 78.2313</b></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 04 / THESIS -->
+      <section class="slide system-thesis-slide" data-section="01 / RESULT" data-title="好结果背后是一套可重复系统">
+        <div class="slide-body system-thesis-layout" data-audit-bound>
+          <p class="eyebrow">TODAY'S POINT</p>
+          <h2>这个项目的主线，是从<span class="accent-observer">自动刷榜</span>走向<span class="accent-reasoning">执行前预测</span></h2>
+          <div class="thesis-chain">
+            <article><span>01</span><h3>自动刷榜</h3><p>先让 Agent 能持续训练、提交、抓分。</p></article>
+            <i></i>
+            <article><span>02</span><h3>可重复系统</h3><p>解决等待、唤醒、回报、状态所有权。</p></article>
+            <i></i>
+            <article><span>03</span><h3>策略搜索</h3><p>让实验不只是跑，而是有记忆地改进。</p></article>
+            <i></i>
+            <article><span>04</span><h3>执行前预测</h3><p>最后把论文引入：先筛候选，再花 GPU。</p></article>
+          </div>
+          <div class="thesis-bottom"><strong>所以我不会只讲一个分数。</strong><span>我要讲的是：为什么一个 Agent 系统能稳定地走到这个分数，以及下一步为什么自然会走向 ForeAgent。</span></div>
+        </div>
+      </section>
+
+      <!-- 05 / ORIGIN FLOW -->
+      <section class="slide original-flow-slide" data-section="02 / FLOWCHART" data-title="从一个朴素需求开始">
+        <div class="slide-body flow-slide-body">
+          <div class="title-row" data-audit-bound>
+            <div><p class="eyebrow">FLOW 01 · 起点</p><h2>从比赛需求，走到 <span class="accent-observer">Agent Loop</span></h2></div>
+            <p class="title-note">恢复 V1 的横向旅程构图：<br>三个起点汇入同一条实践路线。</p>
+          </div>
+          <div class="zoom-surface origin-surface" data-zoomable data-cameras='[{"x":0,"y":0,"scale":1,"label":"全局旅程"},{"x":520,"y":-35,"scale":1.25,"label":"三个起点与王老师 idea"},{"x":0,"y":35,"scale":1.32,"label":"标准化评测"},{"x":-460,"y":-75,"scale":1.35,"label":"手搓 Agent Loop"}]' data-audit-bound>
+            <div class="diagram-world origin-world">
+              <svg class="diagram-lines" viewBox="0 0 1440 560" aria-hidden="true">
+                <defs><marker id="origin-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#0369a1"/></marker></defs>
+                <path d="M275 145 C350 145 365 260 440 260" class="line muted-line"/>
+                <path d="M275 260 H440" class="line muted-line"/>
+                <path d="M275 375 C350 375 365 260 440 260" class="line muted-line"/>
+                <path d="M620 260 H700" class="line observer-line" marker-end="url(#origin-arrow)"/>
+                <path d="M860 260 H930" class="line observer-line" marker-end="url(#origin-arrow)"/>
+                <path d="M1090 260 H1150" class="line observer-line" marker-end="url(#origin-arrow)"/>
+                <path d="M1230 315 V375" class="line observer-line" marker-end="url(#origin-arrow)"/>
+                <path d="M1150 430 H1080" class="line observer-line" marker-end="url(#origin-arrow)"/>
+              </svg>
+              <div class="origin-cluster-label mono">PERSONAL START</div>
+              <div class="diagram-node node-soft" style="left:70px;top:90px" data-focus="370,120,1.7"><small>起点 01</small><strong>基础不太好</strong></div>
+              <div class="diagram-node node-soft" style="left:70px;top:205px" data-focus="370,20,1.7"><small>起点 02</small><strong>Kaggle-like 比赛</strong></div>
+              <div class="diagram-node node-soft teacher-idea-node" style="left:70px;top:320px" data-focus="370,-80,1.7"><small>起点 03</small><strong>王老师的 idea</strong></div>
+              <div class="diagram-node node-observer node-wide" style="left:440px;top:205px" data-focus="160,20,1.6"><small>明确目标 + 即时反馈</small><strong>自动训练 / 刷 Kaggle</strong></div>
+              <div class="diagram-node node-observer" style="left:700px;top:205px"><small>Benchmark</small><strong>MLE-bench</strong></div>
+              <div class="diagram-node node-failure" style="left:930px;top:205px"><small>现实约束</small><strong>大多闭源</strong></div>
+              <div class="diagram-node node-reasoning" style="left:1150px;top:205px"><small>于是</small><strong>手搓实现</strong></div>
+              <div class="diagram-node node-reasoning" style="left:1150px;top:375px"><small>Learning</small><strong>Claude Code</strong></div>
+              <div class="diagram-node node-evidence final-node" style="left:860px;top:375px" data-focus="-330,-120,1.65"><small>真正的问题</small><strong>理解 Agent Loop</strong></div>
+              <img class="origin-note origin-note-large" src="../materials/images/01_project_brief_stitched_key_messages.png" alt="拼接后的王老师 Autoresearch 与 deep research 分工核心讨论截图">
+            </div>
+            <div class="camera-badge mono"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 / LOOP FLOW -->
+      <section class="slide original-flow-slide loop-scroll-slide" data-section="02 / FLOWCHART" data-title="Loop：什么时候继续">
+        <div class="slide-body flow-slide-body">
+          <div class="title-row" data-audit-bound>
+            <div><p class="eyebrow observer-text">FLOW 02 · Loop</p><h2>不要把长任务写死在等待上</h2></div>
+            <p class="title-note">滚轮自由缩放、拖动平移；<br>空格按讲述顺序切换镜头。</p>
+          </div>
+          <div class="zoom-surface svg-zoom-surface tall-flow-surface" data-zoomable data-min-scale="0.12" data-max-scale="3.6" data-cameras='[{"x":-170,"y":0,"scale":0.15,"label":"Loop 完整全图"},{"x":-170,"y":760,"scale":0.58,"label":"第一次放大 · 之后手动拖动"}]' data-audit-bound>
+            <div class="diagram-world svg-world tall-svg-world">
+              <img src="assets/flows/02-loop.svg" alt="原始 Loop 流程图">
+              <img class="loop-evidence-note" src="../materials/images/02_heartbeat_repeated_polling_upscaled_x2.png" alt="完整展示大量重复轮询记录的高清长截图">
+              <img class="loop-evidence-note loop-evidence-note-secondary" src="assets/evidence/loop-markdown-screenshot.png" alt="Loop 相关 Markdown 语法截图">
+            </div>
+            <div class="camera-badge mono"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 / SCHEDULER FLOW -->
+      <section class="slide original-flow-slide" data-section="02 / FLOWCHART" data-title="调度器问题：ACTIVE 不等于已投递">
+        <div class="slide-body flow-slide-body">
+          <div class="title-row" data-audit-bound>
+            <div><p class="eyebrow failure-text">FLOW 03 · Scheduler</p><h2>调度器是一条单独的可靠性边界</h2></div>
+            <p class="title-note">这不是 Loop 的小 bug，<br>而是“记录层”和“执行层”的断裂。</p>
+          </div>
+          <div class="zoom-surface svg-zoom-surface scheduler-flow-surface" data-zoomable data-min-scale="0.2" data-max-scale="3.6" data-cameras='[{"x":-370,"y":0,"scale":0.3,"label":"完整全图 · 手动缩放拖动"}]' data-audit-bound>
+            <div class="diagram-world svg-world scheduler-svg-world">
+              <img src="assets/flows/03-scheduler.svg" alt="原始调度器流程图">
+            </div>
+            <figure class="floating-evidence floating-evidence-scheduler">
+              <span class="evidence-pin mono">EVIDENCE 02</span>
+              <div class="floating-evidence-copy"><strong>ACTIVE ≠ 已投递</strong><span>原生 automation 也可能没有真正唤醒任务。</span></div>
+              <div class="floating-evidence-image"><img src="../materials/images/04_automation_scheduler_failure.png" alt="automation 调度失败截图"></div>
+            </figure>
+            <div class="camera-badge mono"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 / ARCHITECTURE -->
+      <section class="slide original-flow-slide" data-section="03 / AGENT ARCHITECTURE" data-title="单 Agent、Subagent，还是 Agent Team">
+        <div class="slide-body flow-slide-body">
+          <div class="title-row" data-audit-bound>
+            <div><p class="eyebrow reasoning-text">FLOW 04 · Agent 架构</p><h2>Agent 数量不是目标，生命周期所有权才是</h2></div>
+            <p class="title-note">同一张图里比较单 Agent、<br>Subagent 和 Agent Team。</p>
+          </div>
+          <div class="zoom-surface svg-zoom-surface wide-svg" data-zoomable data-cameras='[{"x":0,"y":0,"scale":1,"label":"三种架构全图"},{"x":430,"y":0,"scale":1.45,"label":"第一次放大 · 之后手动拖动"}]' data-audit-bound>
+            <div class="diagram-world svg-world architecture-svg-world">
+              <img src="assets/flows/04-architecture.svg" alt="原始 Agent 架构流程图">
+            </div>
+            <div class="camera-badge mono"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09 / LIFECYCLE -->
+      <section class="slide original-flow-slide" data-section="03 / AGENT ARCHITECTURE" data-title="理想 Agent Team 的长期生命周期">
+        <div class="slide-body flow-slide-body">
+          <div class="title-row" data-audit-bound>
+            <div><p class="eyebrow reasoning-text">FLOW 05 · Persistent Lifecycle</p><h2>持久状态保存事实，但不会自己行动</h2></div>
+            <p class="title-note">看板、后台 worker、idle 和死亡边界<br>要放在同一个生命周期里理解。</p>
+          </div>
+          <div class="zoom-surface svg-zoom-surface" data-zoomable data-max-scale="4.2" data-cameras='[{"x":0,"y":0,"scale":1,"label":"生命周期全图"},{"x":0,"y":500,"scale":3,"label":"第一次放大 3× · 之后手动拖动"}]' data-audit-bound>
+            <div class="diagram-world svg-world"><img src="assets/flows/05-lifecycle.svg" alt="原始持久生命周期流程图"></div>
+            <div class="camera-badge mono"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 / AIDE NATIVE LOOP -->
+      <section class="slide original-flow-slide" data-section="04 / SEARCH LOOP" data-title="AIDE：原生实验闭环">
+        <div class="slide-body flow-slide-body">
+          <div class="title-row" data-audit-bound>
+            <div><p class="eyebrow evidence-text">FLOW 06 · NATIVE AIDE</p><h2>先把原生 AIDE 的闭环讲清楚</h2></div>
+            <p class="title-note">Draft、Debug、Improve<br>都直接走真实执行，再写回 Journal。</p>
+          </div>
+          <div class="zoom-surface aide-surface" data-zoomable data-cameras='[{"x":0,"y":0,"scale":1,"label":"AIDE 全图"},{"x":0,"y":20,"scale":1.22,"label":"第一次放大 · 之后手动拖动"}]' data-audit-bound>
+            <div class="diagram-world aide-world" data-aide-graph="native">
+              <svg class="aide-arrows" viewBox="0 0 1440 570" aria-hidden="true">
+                <defs><marker id="aide-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="currentColor"/></marker></defs>
+                <path class="aide-native-line" d="M360 280 H410" marker-end="url(#aide-arrow)"/>
+                <path class="aide-native-line" d="M580 280 C600 280 600 118 620 118" marker-end="url(#aide-arrow)"/>
+                <path class="aide-native-line" d="M780 180 C860 210 1040 205 1170 265" marker-end="url(#aide-arrow)"/>
+                <path class="aide-native-line" d="M954 180 C1030 190 1100 225 1170 265" marker-end="url(#aide-arrow)"/>
+                <path class="aide-native-line" d="M1128 180 C1148 200 1160 230 1170 265" marker-end="url(#aide-arrow)"/>
+                <path class="aide-native-line" d="M1280 340 V455 H210 V365" marker-end="url(#aide-arrow)"/>
+              </svg>
+              <div class="journal-core">
+                <span>AIDE JOURNAL</span><strong>经验 · 结果 · 当前最优解</strong><i>先记录事实，再决定下一步</i>
+              </div>
+              <div class="aide-decision diagram-node node-observer">
+                <small>NEXT STEP</small><strong>还有实验步数？</strong><span>Journal 驱动判断</span>
+              </div>
+              <div class="action-triad">
+                <article class="action draft"><small>01 / PROPOSE</small><b>Draft</b><span>提出初始方案</span><em>→ 真实执行</em></article>
+                <article class="action debug"><small>02 / REPAIR</small><b>Debug</b><span>修复失败与实现问题</span><em>→ 真实执行</em></article>
+                <article class="action improve"><small>03 / SEARCH</small><b>Improve</b><span>改进已有可运行方案</span><em>→ 真实执行</em></article>
+              </div>
+              <div class="execute-node">
+                <span class="gpu-icon">GPU</span><strong>真实执行<br>训练 / 验证</strong><small>每次都生成可核验反馈</small>
+              </div>
+              <div class="feedback-route"><span>读取指标、错误与真实反馈</span><b>写回 Journal</b></div>
+              <div class="aide-loop-label mono">NATIVE AIDE · NO PREDICTOR IN THIS LOOP</div>
+            </div>
+            <div class="camera-badge mono"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 / AIDE WHITEBOARD -->
+      <section class="slide whiteboard-slide" data-section="04 / SEARCH LOOP" data-title="AIDE：现场推演白板" data-whiteboard>
+        <div class="slide-body whiteboard-layout">
+          <div class="title-row" data-audit-bound>
+            <div><p class="eyebrow evidence-text">LIVE WHITEBOARD · NATIVE AIDE</p><h2>把这个循环放到白板上现场推演</h2></div>
+            <p class="title-note">进入本页自动开启批改模式；<br>笔迹翻页保留，刷新后清空。</p>
+          </div>
+          <div class="whiteboard-surface" data-audit-bound>
+            <span class="whiteboard-corner whiteboard-corner-top">AIDE LOOP · WORKSPACE</span>
+            <span class="whiteboard-hint">从 Journal、动作选择和真实执行开始画</span>
+            <span class="whiteboard-corner whiteboard-corner-bottom">LIVE REASONING</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12 / LOOP PSEUDOCODE -->
+      <section class="slide loop-code-slide" data-section="04 / SEARCH LOOP" data-title="AIDE：Draft 与 Improve 循环伪代码">
+        <div class="slide-body loop-code-layout" data-audit-bound>
+          <div class="title-row">
+            <div><p class="eyebrow reasoning-text">PSEUDOCODE · SEARCH LOOP</p><h2>先生成多个 Draft，再持续接受更优解</h2></div>
+            <p class="title-note">保留现场写法；<br>用批改模式直接圈画变量与循环。</p>
+          </div>
+          <div class="loop-code-stage">
+            <div class="code-window-head"><span></span><span></span><span></span><b>search_loop.py</b></div>
+            <pre><code><span class="code-name">draft</span> = <span class="code-number">5</span>
+<span class="code-name">gen</span> = <span class="code-call">build_gen</span>()
+<span class="code-name">start</span>=<span class="code-null">NULL</span>
+
+<span class="code-keyword">for</span> i <span class="code-keyword">in</span> <span class="code-call">range</span>(draft):
+    start=<span class="code-call">max</span>(start,<span class="code-call">step</span>(gen))
+    
+<span class="code-keyword">while</span>(<span class="code-number">1</span>):
+    temp=<span class="code-call">step</span>(start)
+    <span class="code-keyword">if</span> temp&gt;start:
+        start=temp</code></pre>
+            <div class="code-reading"><span>01 · Draft × 5</span><i>→</i><span>02 · 选择当前最优</span><i>→</i><span>03 · Improve 直到不再提升</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 / SEARCH CONTRADICTION -->
+      <section class="slide search-question-slide" data-section="04 / SEARCH LOOP" data-title="策略搜索的真正矛盾">
+        <div class="slide-body search-question-layout" data-audit-bound>
+          <p class="eyebrow uncertain-text">THE CONTRADICTION</p>
+          <h2>搜索结果可以很快产生，<br>但真实改进很慢。</h2>
+          <div class="search-equation">
+            <article><span>LLM</span><strong>很多候选</strong><p>秒级生成多个 Improve 方案</p></article>
+            <i>+</i>
+            <article><span>GPU</span><strong>少量执行</strong><p>每次真实验证可能是分钟到小时</p></article>
+            <i>=</i>
+            <article class="problem"><span>问题</span><strong>跑哪一个？</strong><p>搜索本身不是最慢的，慢的是把搜索结果变成证据。</p></article>
+          </div>
+          <div class="paper-bridge"><span>因此论文的问题不是“怎么生成更多想法”</span><b>而是：能不能在执行前预测哪个想法更值得跑？</b></div>
+        </div>
+      </section>
+
+      <!-- 12 / FOREAGENT INCREMENT -->
+      <section class="slide original-flow-slide" data-section="04 / SEARCH LOOP" data-title="ForeAgent：从 Improve 长出的增量分支">
+        <div class="slide-body flow-slide-body">
+          <div class="title-row" data-audit-bound>
+            <div><p class="eyebrow reasoning-text">INCREMENT ON NATIVE AIDE</p><h2>ForeAgent 只从 <span class="accent-reasoning">Improve</span> 长出一条新分支</h2></div>
+            <p class="title-note">原架构仍然保留；<br>黄色分支先预测，再回到真实执行。</p>
+          </div>
+          <div class="zoom-surface aide-surface foreagent-surface" data-zoomable data-foreagent data-cameras='[{"x":0,"y":0,"scale":1,"label":"原生 AIDE + 增量分支全图"},{"x":55,"y":30,"scale":1.22,"label":"创新分支聚焦 · 之后手动拖动"}]' data-audit-bound>
+            <div class="diagram-world aide-world foreagent-world" data-aide-graph="foreagent">
+              <svg class="aide-arrows" viewBox="0 0 1440 570" aria-hidden="true">
+                <defs><marker id="foreagent-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="currentColor"/></marker></defs>
+                <path class="aide-native-line" d="M360 280 H410" marker-end="url(#foreagent-arrow)"/>
+                <path class="aide-native-line" d="M580 280 C600 280 600 118 620 118" marker-end="url(#foreagent-arrow)"/>
+                <path class="aide-native-line" d="M780 180 C860 210 1040 205 1170 265" marker-end="url(#foreagent-arrow)"/>
+                <path class="aide-native-line" d="M954 180 C1030 190 1100 225 1170 265" marker-end="url(#foreagent-arrow)"/>
+                <path class="aide-native-line" d="M1128 180 C1148 200 1160 230 1170 265" marker-end="url(#foreagent-arrow)"/>
+                <path class="aide-native-line" d="M1280 340 V455 H210 V365" marker-end="url(#foreagent-arrow)"/>
+                <path class="fore-branch" d="M1048 180 C1048 222 965 222 965 265" marker-end="url(#foreagent-arrow)"/>
+                <path class="fore-branch" d="M1100 325 H1140 C1155 325 1160 300 1170 280" marker-end="url(#foreagent-arrow)"/>
+              </svg>
+              <div class="journal-core">
+                <span>AIDE JOURNAL</span><strong>经验 · 结果 · 当前最优解</strong><i>原生事实链保持不变</i>
+              </div>
+              <div class="aide-decision diagram-node node-observer">
+                <small>NEXT STEP</small><strong>还有实验步数？</strong><span>Journal 驱动判断</span>
+              </div>
+              <div class="action-triad">
+                <article class="action draft"><small>01 / PROPOSE</small><b>Draft</b><span>提出初始方案</span><em>→ 真实执行</em></article>
+                <article class="action debug"><small>02 / REPAIR</small><b>Debug</b><span>修复失败与实现问题</span><em>→ 真实执行</em></article>
+                <article class="action improve active-action"><small>03 / SEARCH</small><b>Improve</b><span>改进已有可运行方案</span><em>→ 原生执行 + 新分支</em></article>
+              </div>
+              <div class="foreagent-node">
+                <span>FOREAGENT</span><strong>Predict-then-Verify</strong><small>候选偏好预测 · 预算筛选</small>
+              </div>
+              <div class="execute-node">
+                <span class="gpu-icon">GPU</span><strong>真实执行<br>训练 / 验证</strong><small>最终裁判仍是真实反馈</small>
+              </div>
+              <div class="feedback-route"><span>读取指标、错误与真实反馈</span><b>写回 Journal</b></div>
+              <div class="aide-loop-label mono">NATIVE AIDE + FOREAGENT INCREMENT</div>
+            </div>
+            <div class="camera-badge mono"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 15 / FOREAGENT LOOP PSEUDOCODE -->
+      <section class="slide loop-code-slide improved-loop-code-slide" data-section="04 / SEARCH LOOP" data-title="ForeAgent：候选生成与模型选择伪代码">
+        <div class="slide-body loop-code-layout" data-audit-bound>
+          <div class="title-row">
+            <div><p class="eyebrow uncertain-text">IMPROVED PSEUDOCODE · FOREAGENT</p><h2>Improve 不再只生成一个方案</h2></div>
+            <p class="title-note">一次展开 10 个候选，<br>再让模型选择最值得执行的一个。</p>
+          </div>
+          <div class="loop-code-stage improved-code-stage">
+            <div class="code-window-head"><span></span><span></span><span></span><b>foreagent_search_loop.py</b></div>
+            <pre><code><span class="code-name">draft</span> = <span class="code-number">5</span>
+<span class="code-name">gen</span> = <span class="code-call">build_gen</span>()
+<span class="code-name">start</span>=<span class="code-null">NULL</span>
+
+<span class="code-keyword">for</span> i <span class="code-keyword">in</span> <span class="code-call">range</span>(draft):
+    start=<span class="code-call">max</span>(start,<span class="code-call">step</span>(gen))
+    
+<span class="code-keyword">while</span>(<span class="code-number">1</span>):
+<mark class="code-improvement"><b>NEW</b><span>先生成 <strong>10</strong> 个方案 <i>step(start)</i>，然后让模型自己选一个最好的</span></mark>
+    <span class="code-keyword">if</span> temp&gt;start:
+        start=temp</code></pre>
+            <div class="code-reading improved-reading"><span>Generate × 10</span><i>→</i><span class="model-choice">模型预选 Top-1</span><i>→</i><span>真实执行验证</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13 / TOURNAMENT GENERATE -->
+      <section class="slide" data-section="04 / SEARCH LOOP" data-title="第一步：一次生成 m=10 个候选">
+        <div class="slide-body tournament-generation-layout" data-audit-bound>
+          <div class="title-row" data-audit-bound>
+            <div><p class="eyebrow reasoning-text">FLOW 07A · GENERATE</p><h2>第一步：一次生成 <span class="accent-reasoning">m = 10</span> 个候选</h2></div>
+            <p class="title-note">先把候选空间摊开。<br>这一页只讲“怎么产生十个方案”。</p>
+          </div>
+          <div class="generation-stage">
+            <div class="evidence-input-panel"><span class="mono">INPUT EVIDENCE</span><strong>任务描述 + 可信数据报告</strong><p>当前代码、历史结果与可执行约束，作为十个方案共同的上下文。</p></div>
+            <div class="generation-arrow">→</div>
+            <div class="candidate-cloud large-candidate-cloud"><div class="candidate-cloud-head"><span class="mono">GENERATE</span><b>10 个并行 Improve 方案</b></div><div class="candidate-dots"><i>01</i><i>02</i><i>03</i><i>04</i><i>05</i><i>06</i><i>07</i><i>08</i><i>09</i><i>10</i></div></div>
+          </div>
+          <div class="generation-foot"><span>每个候选都是一个可执行改进意图</span><b>下一页才进入 Pairwise World Model 比较</b></div>
+        </div>
+      </section>
+
+      <!-- 14 / TOURNAMENT PAIRWISE -->
+      <section class="slide" data-section="04 / SEARCH LOOP" data-title="第二步：Pairwise World Model 形成排序">
+        <div class="slide-body tournament-pairwise-layout" data-audit-bound>
+          <div class="title-row" data-audit-bound>
+            <div><p class="eyebrow reasoning-text">FLOW 07B · PAIRWISE WORLD MODEL</p><h2>第二步：比较置信度，记录每一轮淘汰</h2></div>
+            <div class="parameter-strip mono"><span>confidence = <b>0.7</b></span><span>保留低置信度双方</span></div>
+          </div>
+          <div class="pairwise-board">
+            <div class="pairwise-evidence"><span class="mono">WORLD MODEL INPUT</span><strong>方案 × 当前任务证据</strong><p>不直接声称谁是真正赢家，只预测局部偏好。</p></div>
+            <div class="match-stack">
+              <div class="match match-high"><span>A</span><b>0.82</b><span class="loser">B</span><small>高置信度 · A 晋级 · 淘汰轮次 R1</small></div>
+              <div class="match match-low"><span>C</span><b>0.61</b><span>D</span><small>低于 0.7 · C / D 双方保留 · 进入下一轮</small></div>
+              <div class="match match-high"><span>E</span><b>0.76</b><span class="loser">F</span><small>高置信度 · E 晋级 · 淘汰轮次 R2</small></div>
+            </div>
+            <div class="ranking-board"><span class="mono">RANKING JOURNAL</span><ol><li><b>01</b><strong>A</strong><small>R1 胜出</small></li><li><b>02</b><strong>E</strong><small>R2 胜出</small></li><li><b>03</b><strong>C / D</strong><small>保留待比</small></li></ol><p>每场比较都留下排序证据，而不是只保留一个黑箱分数。</p></div>
+          </div>
+          <div class="pairwise-foot"><span>高置信度：胜者晋级</span><i></i><span>低置信度：双方保留</span><i></i><b>最终得到可追溯排序</b></div>
+        </div>
+      </section>
+
+      <!-- 15 / TOURNAMENT VERIFY -->
+      <section class="slide" data-section="04 / SEARCH LOOP" data-title="第三步：只跑 Top-1 并写回 Journal">
+        <div class="slide-body tournament-verify-layout" data-audit-bound>
+          <div class="title-row" data-audit-bound>
+            <div><p class="eyebrow evidence-text">FLOW 07C · VERIFY</p><h2>第三步：从排序里选 <span class="accent-evidence">Top-1</span>，只跑一次真实验证</h2></div>
+            <div class="parameter-strip mono"><span>m = <b>10</b></span><span>k = <b>1</b></span><span>裁判 = <b>真实训练 / 验证</b></span></div>
+          </div>
+          <div class="verify-pipeline">
+            <article class="verify-card ranking-output"><span class="mono">RANKING OUTPUT</span><strong>Top-1</strong><p>从预测排序中选择最值得执行的一个方案。</p></article>
+            <i>→</i>
+            <article class="verify-card real-run large"><span class="mono">VERIFY</span><strong>真实训练 / 验证</strong><p>GPU 产生真正的指标、错误和运行轨迹。</p></article>
+            <i>→</i>
+            <article class="verify-card journal-output"><span class="mono">WRITE BACK</span><strong>AIDE Journal</strong><p>真实反馈写回，成为下一轮判断的证据。</p></article>
+          </div>
+          <div class="verify-boundary"><span class="mono">BOUNDARY</span><b>ForeAgent 只减少盲目执行；它不替代真实 evaluator。</b></div>
+        </div>
+      </section>
+
+      <!-- 16 / EXECUTION BOTTLENECK OVERVIEW -->
+      <section class="slide execution-overview-slide" data-section="05 / PAPER EVIDENCE" data-title="执行前预测：数小时执行与数秒推理">
+        <figure class="execution-overview-figure" data-audit-bound>
+          <img src="assets/paper/top-zh-CN.png" alt="传统机器学习智能体与执行前预测的中文对比图">
+        </figure>
+      </section>
+
+      <!-- 17 / PAPER EVIDENCE AUDIT -->
+      <section class="slide paper-audit-slide" data-section="05 / PAPER AUDIT" data-title="算法已经讲完；现在审计它是否值得相信">
+        <div class="slide-body paper-audit-layout" data-audit-bound>
+          <div class="title-row audit-title-row">
+            <div><p class="eyebrow reasoning-text">FOREAGENT / EVIDENCE AUDIT</p><h2>算法已经讲完；现在审计它是否值得相信</h2></div>
+            <p class="title-note">Can We Predict Before Executing ML Agents?<br><span class="mono">2601.05930v2</span></p>
+          </div>
+          <figure class="paper-diagram-frame audit-map-frame"><img src="assets/flows/07-paper-audit-map.svg" alt="ForeAgent 论文证据审计总图：信号、边界与系统收益"></figure>
+          <div class="audit-bridge"><span class="mono">WHAT → WHY THIS WAY</span><strong>先确认信号，再划定边界，最后检查系统收益。</strong></div>
+        </div>
+      </section>
+
+      <!-- 18 / PREFERENCE EVIDENCE CHAIN -->
+      <section class="slide" data-section="05 / PAPER EVIDENCE" data-title="预测能力不是靠自评，而是由真实执行轨迹标注">
+        <div class="slide-body paper-evidence-layout" data-audit-bound>
+          <div class="title-row">
+            <div><p class="eyebrow evidence-text">PROVENANCE BEFORE PREDICTION</p><h2>预测能力不是靠自评，<br>而是由<span class="accent-evidence">真实执行轨迹</span>标注</h2></div>
+            <p class="title-note">AIDE + AutoMind<br>MLE-bench 真实轨迹</p>
+          </div>
+          <figure class="paper-diagram-frame evidence-chain-frame"><img src="assets/flows/08-preference-evidence-chain.svg" alt="从二十六个任务到一万八千四百三十八个真实标签方案对的证据链"></figure>
+        </div>
+      </section>
+
+      <!-- 19 / INPUT SEMANTICS -->
+      <section class="slide" data-section="05 / PAPER EVIDENCE" data-title="它判断的是方案与数据是否匹配">
+        <div class="slide-body ablation-layout" data-audit-bound>
+          <div class="title-row"><div><p class="eyebrow reasoning-text">WHAT THE WORLD MODEL ACTUALLY SEES</p><h2>它不是在看哪段代码更高级，<br>而是在判断<span class="accent-evidence">方案与数据是否匹配</span></h2></div><p class="title-note">同一模型，不同输入形态。<br>更多 token ≠ 更可靠判断。</p></div>
+          <div class="ablation-steps">
+            <div class="ablation-step"><span>CODE ONLY</span><b>56.7%</b><i style="--h:42%"></i><small>只看完整代码</small></div>
+            <div class="ablation-step"><span>RAW DATA</span><b>57.1%</b><i style="--h:45%"></i><small>原始数据几乎无增益</small></div>
+            <div class="ablation-step"><span>STATISTICS</span><b>59.0%</b><i style="--h:61%"></i><small>真实数值统计</small></div>
+            <div class="ablation-step best"><span>LANGUAGE REPORT</span><b>61.3%</b><i style="--h:82%"></i><small>任务对齐的语言报告</small></div>
+            <div class="ablation-step mismatch"><span>MISMATCHED</span><b>56.8%</b><i style="--h:43%"></i><small>上下文错配，能力回落</small></div>
+          </div>
+          <div class="semantic-chain"><span class="evidence-text">可信 evaluator 产生事实</span><i>→</i><span>任务语义压缩</span><i>→</i><span class="reasoning-text">LLM 消费事实并推理</span></div>
+        </div>
+      </section>
+
+      <!-- 20 / SIGNAL EXISTS -->
+      <section class="slide" data-section="05 / PAPER EVIDENCE" data-title="61.5% 不是裁判准确率，而是低成本排序信号">
+        <div class="slide-body accuracy-layout" data-audit-bound>
+          <div class="title-row"><div><p class="eyebrow">CLAIM 01 / THE SIGNAL EXISTS</p><h2>61.5% 不是裁判准确率，<br>而是<span class="accent-reasoning">低成本排序信号</span></h2></div><div class="not-score">61.5%<span>PAIRWISE · NOT LEADERBOARD</span></div></div>
+          <div class="bar-chart" role="img" aria-label="随机、复杂度启发式、GPT-5.1 与 DeepSeek-V3.2-Thinking 的偏好准确率比较">
+            <div class="chart-grid"><i style="left:0%"></i><i style="left:25%"></i><i style="left:50%"></i><i style="left:75%"></i><i style="left:100%"></i></div>
+            <div class="bar-row baseline"><span>随机</span><div><b style="width:0%"></b><em>50.0%</em></div></div>
+            <div class="bar-row heuristic"><span>复杂度启发式</span><div><b style="width:5.3%"></b><em>50.8%</em></div></div>
+            <div class="bar-row gpt"><span>GPT-5.1</span><div><b style="width:58.7%"></b><em>58.8%</em></div></div>
+            <div class="bar-row deepseek"><span>DeepSeek-V3.2-Thinking</span><div><b style="width:76.7%"></b><em>61.5%</em></div></div>
+            <div class="chart-scale mono"><span>50% · CHANCE</span><span>65%</span></div>
+          </div>
+          <div class="signal-verdict"><span><b>高于随机 11.5 pp</b> · 信号存在</span><i></i><strong>适合：低成本候选过滤</strong><i></i><span class="failure-text">远不足以替代真实执行</span></div>
+        </div>
+      </section>
+
+      <!-- 21 / LOCAL COMPARISON BOUNDARY -->
+      <section class="slide" data-section="05 / PAPER EVIDENCE" data-title="它适合 Pairwise，不适合一次排完整个榜">
+        <div class="slide-body boundary-layout" data-audit-bound>
+          <div class="title-row"><div><p class="eyebrow uncertain-text">CLAIM 02 / LOCAL, NOT GLOBAL</p><h2>它适合 Pairwise，<span class="uncertain-text">不适合一次排完整个榜</span></h2></div><p class="title-note">六成说明信号存在，<br>边界决定它能拥有多大权力。</p></div>
+          <div class="boundary-panels">
+            <article class="thinking-panel"><span class="panel-index mono">01 / REASONING</span><h3>主动推理优于直接回答</h3><div class="compare-numbers"><div><b>61.3%</b><small>Thinking</small></div><i>vs</i><div><b>55.9%</b><small>Direct</small></div></div><p>不能凭第一印象选择“看起来更高级”的代码。</p></article>
+            <article class="ranking-panel"><span class="panel-index mono">02 / SCALE</span><h3>方案一多，全局排序迅速失真</h3><div class="rank-fall"><span><b>N=2 · A@1</b><em>61.3%</em></span><i></i><span><b>N=5 · A@1</b><em>31.1%</em></span></div><div class="rho">N=5 · Spearman ρ ≈ <b>0.22–0.23</b></div></article>
+            <article class="confidence-panel"><span class="panel-index mono">03 / GUARDRAIL</span><h3>所以只做保守的局部淘汰</h3><div class="guardrails"><div><span>c ≥ 0.7</span><b>高置信度才晋级 / 淘汰</b></div><div><span>c &lt; 0.7</span><b>双方都保留</b></div></div><p>World Model 是局部比较器，不是全局规划器。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 22 / VALIDATION GAP -->
+      <section class="slide" data-section="05 / PAPER EVIDENCE" data-title="真实执行更强，但 validation 仍不等于测试集真理">
+        <div class="slide-body validation-layout" data-audit-bound>
+          <div><p class="eyebrow">CLAIM 02 / TWO NOISY SIGNALS</p><h2>真实执行更强，<br>但 validation 仍不等于<span class="accent-evidence">测试集真理</span></h2><p class="lead-copy">系统面对的不是“预测或执行”二选一，而是两个成本不同、强度不同的有噪声信号。</p></div>
+          <div class="signal-ladder">
+            <div class="signal-step"><span class="mono">CHANCE</span><b>50.0%</b><small>零成本基线</small></div>
+            <i></i>
+            <div class="signal-step reasoning-step"><span class="mono">LLM</span><b>61.5%</b><small>秒级 · 成对预判</small></div>
+            <i></i>
+            <div class="signal-step evidence-step"><span class="mono">VALIDATION</span><b>72.2%</b><small>小时级 · 预测 test winner</small></div>
+            <i class="gap"></i>
+            <div class="test-truth"><span>TEST</span><b>最终边界</b></div>
+          </div>
+          <div class="validation-conclusion"><strong>便宜信号负责筛选，真实执行负责锚定</strong><span>72.2% 也只是 validation 预测 test 相对优劣的成对准确率。</span></div>
+        </div>
+      </section>
+
+      <!-- 23 / EVIDENCE-DERIVED DESIGN -->
+      <section class="slide" data-section="05 / PAPER EVIDENCE" data-title="所以方法只能是 Predict-then-Verify">
+        <div class="slide-body evidence-design-layout" data-audit-bound>
+          <div class="title-row"><div><p class="eyebrow reasoning-text">EVIDENCE → CONTROL STRATEGY</p><h2>所以方法只能是 <span class="accent-reasoning">Predict-then-Verify</span></h2></div><p class="title-note">不是先画架构再找理由，<br>而是让实验边界决定控制策略。</p></div>
+          <div class="design-proof-table">
+            <div class="design-proof-head"><span>论文证据</span><span></span><span>强制约束</span><span></span><span>系统设计</span></div>
+            <div class="design-proof-row"><div><b>61.5% vs 50.0%</b><span>信号存在，但远非裁判</span></div><i>→</i><strong>只能缩窄候选</strong><i>→</i><div class="design-output"><b>预测无最终否决权</b><span>Top-k 必须真实执行</span></div></div>
+            <div class="design-proof-row"><div><b>N=5 · A@1 = 31.1%</b><span>全局排序快速退化</span></div><i>→</i><strong>只做局部比较</strong><i>→</i><div class="design-output"><b>Pairwise · c = 0.7</b><span>低置信度双方保留</span></div></div>
+            <div class="design-proof-row"><div><b>Execute · up to 9h</b><span>昂贵，但提供真实事实</span></div><i>→</i><strong>预测扩大宽度</strong><i>→</i><div class="design-output"><b>m = 10 · k = 1</b><span>真实结果写回 Journal</span></div></div>
+          </div>
+          <div class="design-contract"><span class="reasoning-text">PREDICT 扩大搜索宽度</span><i>→</i><span class="evidence-text">VERIFY 产生真实锚点</span><i>→</i><span>JOURNAL 保存下一轮证据</span></div>
+        </div>
+      </section>
+
+      <!-- 24 / SYSTEM VALUE CHAIN -->
+      <section class="slide slide-results" data-section="05 / PAPER EVIDENCE" data-title="价值链不是省一次训练，而是把预算换成更宽探索">
+        <div class="slide-body results-layout" data-audit-bound>
+          <div class="title-row"><div><p class="eyebrow evidence-text">CLAIM 03 / AGENT-LEVEL VALUE</p><h2>价值链不是省一次训练，<br>而是把预算换成<span class="accent-reasoning">更宽探索</span></h2></div><p class="title-note">5 tasks · 3 runs/task · 12h</p></div>
+          <div class="result-triptych">
+            <article><span class="result-index mono">01 / BREADTH</span><strong>3.2×</strong><h3>平均探索节点数</h3><p>相同时间预算，看过更多方案</p><div class="mini-visual nodes"><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article><span class="result-index mono">02 / TIME</span><strong>6×</strong><h3>更早达到峰值</h3><p>平均收敛时间加速</p><div class="mini-visual speed"><i></i><i></i></div></article>
+            <article><span class="result-index mono">03 / OUTCOME</span><strong>+4.4<span>pp</span></strong><h3>Beat Ratio</h3><p>绝对提升 4.4 个百分点 · 相对约 +6.3%</p><div class="mini-visual beat"><i></i><b></b></div></article>
+          </div>
+          <div class="causal-chain"><span>减少低价值执行</span><i>→</i><span>相同时间探索更多节点</span><i>→</i><span>更早达到峰值</span><i>→</i><span class="evidence-text">Beat Ratio 提升</span></div>
+        </div>
+      </section>
+
+      <!-- 25 / EXTERNAL VALIDITY -->
+      <section class="slide" data-section="05 / PAPER EVIDENCE" data-title="结果有价值，但证据覆盖仍然有限">
+        <div class="slide-body external-validity-layout" data-audit-bound>
+          <div class="title-row"><div><p class="eyebrow failure-text">EXTERNAL VALIDITY</p><h2>结果有价值，<br>但<span class="failure-text">证据覆盖仍然有限</span></h2></div><p class="title-note">主动划清外推边界，<br>避免把过滤器讲成通用世界模型。</p></div>
+          <div class="validity-grid">
+            <div class="scope-figure">
+              <span class="mono">AGENT-LEVEL EVALUATION</span>
+              <div class="scope-number"><strong>5</strong><div><b>AI4Science tasks</b><small>3 seen · 2 unseen</small></div></div>
+              <div class="scope-task-dots" aria-label="三个已见任务与两个未见任务"><i></i><i></i><i></i><i class="unseen"></i><i class="unseen"></i></div>
+              <div class="scope-meta"><div><b>3×</b><span>runs / task</span></div><div><b>12h</b><span>time budget</span></div></div>
+            </div>
+            <div class="limit-list">
+              <article><span class="mono">01</span><div><h3>难例仍是长尾</h3><p>总体约六成；复杂代码与细粒度类内差异更难。</p></div></article>
+              <article><span class="mono">02</span><div><h3>报告质量依赖输入</h3><p>CV / NLP 的语言化数据报告仍依赖可用元数据。</p></div></article>
+              <article><span class="mono">03</span><div><h3>外推样本仍少</h3><p>两个未见任务不足以证明广泛泛化。</p></div></article>
+              <article><span class="mono">04</span><div><h3>配置仍是固定值</h3><p><span class="mono">m=10 · c=.7 · k=1</span> 尚未随任务与预算动态适配。</p></div></article>
+            </div>
+          </div>
+          <div class="external-verdict"><strong>值得接入实验的预算过滤器</strong><span>≠</span><b>已经验证完成的通用世界模型</b></div>
+        </div>
+      </section>
+
+      <!-- 26 / BOUNDED INTEGRATION CONTRACT -->
+      <section class="slide" data-section="06 / OUR SYSTEM" data-title="ForeAgent 只拥有预算分配权，不拥有最终裁决权">
+        <div class="slide-body integration-contract-layout" data-audit-bound>
+          <div class="title-row"><div><p class="eyebrow reasoning-text">BACK TO OUR SYSTEM / PERMISSION CONTRACT</p><h2>ForeAgent 只拥有预算分配权，<br>不拥有<span class="failure-text">最终裁决权</span></h2></div><p class="title-note">论文给出能力证据；<br>系统负责限制它的权限。</p></div>
+          <figure class="paper-diagram-frame contract-map-frame"><img src="assets/flows/09-paper-to-system-contract.svg" alt="ForeAgent 推理平面与真实执行控制面的权限接入契约"></figure>
+          <div class="contract-footer"><span>只接 Improve</span><i></i><span>预测失败 ≠ Goal 失败</span><i></i><strong>真实 evaluator 写回 Journal</strong></div>
+        </div>
+      </section>
+
+      <!-- 27 / INNOVATIONS -->
+      <section class="slide" data-section="06 / OUR SYSTEM" data-title="ForeAgent 只补最后一块；系统贡献来自四层闭环">
+        <div class="slide-body">
+          <div class="title-row" data-audit-bound>
+            <div><p class="eyebrow reasoning-text">OUR CONTRIBUTION / COMPLETE LOOP</p><h2>ForeAgent 只补最后一块；<br>系统贡献来自<span class="accent-evidence">四层闭环</span></h2></div>
+            <p class="title-note">论文补上 VALUE；<br>工程结构决定系统是否可信。</p>
+          </div>
+          <div class="zoom-surface innovation-surface innovation-static" data-audit-bound>
+            <div class="diagram-world innovation-world">
+              <article class="innovation-card i1"><span class="mono">01 / SAFETY</span><h3>推理决策 × 真实副作用解耦</h3><div class="intent-chain"><b>意图</b><i>→</i><b>契约</b><i>→</i><b>控制面</b><i>→</i><b class="evidence-text">receipt</b></div><p>模型负责判断；状态机和 provenance 守住执行边界。</p></article>
+              <article class="innovation-card i2"><span class="mono">02 / RECOVERY</span><h3>Goal / Attempt / Observer</h3><div class="state-rings"><i>G</i><i>A</i><i>O</i><b>分层恢复</b></div><p>观察器丢失不等于尝试失败，尝试失败不等于目标结束。</p></article>
+              <article class="innovation-card i3"><span class="mono">03 / COLLABORATION</span><h3>流程分治 × 任务分治</h3><div class="division-matrix"><span>探索</span><span>训练</span><span>提交</span><span>数据</span><span>模型</span><span>验证</span></div><p>通过看板、Journal 和结构化产物同步，不复制无限对话。</p></article>
+              <article class="innovation-card i4"><span class="mono">04 / SEARCH</span><h3>动态的证据约束搜索</h3><div class="search-ladder"><span>Draft</span><i>→</i><span>Debug</span><i>→</i><span>Improve</span><i>→</i><span>停滞</span><i>→</i><span class="reasoning-text">ForeAgent</span><i>→</i><span class="evidence-text">Top-k</span></div><p>有提分就利用；可信停滞后才扩大探索。</p></article>
+              <div class="innovation-center"><span>证据</span><b>驱动复杂度</b></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 28 / CONCLUSION -->
+      <section class="slide slide-conclusion" data-section="07 / CONCLUSION" data-title="证据驱动的机器学习实验系统" data-clean="true">
+        <div class="slide-body conclusion-layout" data-audit-bound>
+          <p class="eyebrow">FINAL TAKEAWAY</p>
+          <h2>让正确的角色，在正确的时间，<br>依据可追溯证据，<br>把真实计算花在<span class="accent-evidence">值得验证</span>的方案上。</h2>
+          <div class="conclusion-words"><span>唤醒<small>WHEN</small></span><i></i><span>协作<small>WHO</small></span><i></i><span>记忆<small>CONTEXT</small></span><i></i><span>筛选<small>VALUE</small></span></div>
+          <div class="conclusion-line"></div>
+          <div class="conclusion-next"><span class="mono">NEXT / SUMMER PLAN</span><p>这也是我暑假继续优化 Auto Research 架构时，准备坚持的设计原则。</p></div>
+        </div>
+        <div class="cover-mark mono">TAKEAWAY / 28</div>
+      </section>
+
+      <!-- 29 / SUMMER RESEARCH PLAN -->
+      <section class="slide summer-plan-slide" data-section="08 / SUMMER PLAN" data-title="优化 Auto Research 架构">
+        <div class="slide-body summer-plan-layout" data-audit-bound>
+          <div class="title-row">
+            <div><p class="eyebrow reasoning-text">SUMMER PLAN · RESEARCH</p><h2>优化 <span class="accent-reasoning">Auto Research</span> 架构，再由证据决定方向</h2></div>
+            <p class="title-note">先读论文、改架构；<br>再根据王老师的意见选择路径。</p>
+          </div>
+          <div class="research-decision-flow" aria-label="科研方向决策流程">
+            <svg class="summer-flow-lines" viewBox="0 0 1448 626" aria-hidden="true">
+              <defs><marker id="summer-research-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z"/></marker></defs>
+              <path d="M724 92V132" marker-end="url(#summer-research-arrow)"/>
+              <path d="M724 232V270H260V320" marker-end="url(#summer-research-arrow)"/>
+              <path d="M724 232V270H1110V310" marker-end="url(#summer-research-arrow)"/>
+              <path d="M1110 410V438H875V458" marker-end="url(#summer-research-arrow)"/>
+              <path d="M1110 410V438H1130V458" marker-end="url(#summer-research-arrow)"/>
+              <path d="M1230 500H1245" marker-end="url(#summer-research-arrow)"/>
+            </svg>
+            <article class="summer-node research-root"><span>START</span><strong>阅读相关论文 · 优化 Auto Research 架构</strong><p>暑假上午与晚上持续推进科研</p></article>
+            <article class="summer-node summer-decision research-decision-one"><span>判断 01</span><strong>老师认为该方向容易产出成果吗？</strong></article>
+            <div class="summer-branch-label branch-yes-one">是</div>
+            <div class="summer-branch-label branch-no-one">否</div>
+            <article class="summer-node summer-outcome research-deepen"><span>方向 A</span><strong>继续围绕该方向深入研究</strong><p>把架构优化沉淀为可验证成果</p></article>
+            <article class="summer-node summer-decision research-decision-two"><span>判断 02</span><strong>老师是否有其他方向指导？</strong></article>
+            <div class="summer-branch-label branch-yes-two">是</div>
+            <div class="summer-branch-label branch-no-two">否</div>
+            <article class="summer-node summer-outcome research-follow"><span>方向 B</span><strong>跟随老师的指导</strong><p>开展其他研究方向</p></article>
+            <article class="summer-node summer-platform research-platform"><span>PLATFORM</span><strong>保留 Auto Research 工具</strong><p>作为后续实验平台</p></article>
+            <article class="summer-node summer-kaggle research-kaggle"><span>PRACTICE</span><strong>使用项目参加 Kaggle</strong><p>积累项目与实验经验</p></article>
+          </div>
+          <div class="summer-plan-foot"><span class="mono">DECISION RULE</span><strong>方向服从可产出的证据，也服从老师的研究判断。</strong></div>
+        </div>
+      </section>
+
+      <!-- 30 / SUMMER COMPETITION PLAN -->
+      <section class="slide summer-plan-slide" data-section="08 / SUMMER PLAN" data-title="算法竞赛与时间安排">
+        <div class="slide-body summer-plan-layout competition-plan-layout" data-audit-bound>
+          <div class="title-row">
+            <div><p class="eyebrow observer-text">SUMMER PLAN · ALGORITHM</p><h2>科研保持主线，算法竞赛按<span class="accent-observer">时间节点与名额</span>动态投入</h2></div>
+            <p class="title-note">7 月 29 日先打邀请赛；<br>8 月再决定是否训练到 11 月。</p>
+          </div>
+          <div class="competition-plan-flow" aria-label="时间与算法竞赛决策流程">
+            <article class="competition-stage daily-stage">
+              <header><span class="mono">NOW → AUGUST</span><strong>暑假日程与近期比赛</strong></header>
+              <div class="daily-rhythm"><div><span>上午</span><b>开展科研</b></div><div class="algorithm-slot"><span>下午</span><b>训练算法</b></div><div><span>晚上</span><b>继续科研</b></div></div>
+              <div class="training-until"><span>训练节奏</span><strong>算法训练先持续到 8 月</strong><p>兼顾新 OI 选手到校、马蹄杯与辽宁邀请赛。</p></div>
+              <div class="liaoning-goal"><span class="date-block">07 / 29</span><div><strong>辽宁邀请赛</strong><p>队伍缺人，跟队参赛</p></div><b>目标：银奖</b></div>
+            </article>
+            <div class="competition-transition"><span>8 月</span><i>→</i><b>沟通区域赛名额</b></div>
+            <article class="competition-stage quota-stage">
+              <header><span class="mono">AUGUST DECISION</span><strong>能够获得几个区域赛名额？</strong></header>
+              <div class="quota-options">
+                <div class="quota-two"><span>两个名额</span><strong>继续系统训练</strong><p>坚持到 11 月</p></div>
+                <div class="quota-one"><span>一个名额</span><strong>暑假集中训练</strong><p>开学后减少算法投入</p></div>
+                <div class="quota-zero"><span>没有 / 谈判破裂</span><strong>科研优先</strong><p>转向科研与 ACM 招新</p></div>
+              </div>
+            </article>
+          </div>
+          <div class="summer-plan-foot competition-foot"><span class="mono">TIME ALLOCATION</span><strong>上午科研 · 下午算法 · 晚上科研；8 月以后按名额重新分配投入。</strong></div>
+        </div>
+      </section>
+
+      <!-- 31 / ACKNOWLEDGEMENTS -->
+      <section class="slide institution-cover institution-thanks" data-section="09 / ACKNOWLEDGEMENTS" data-title="感谢聆听" data-clean="true">
+        <div class="institution-accent" aria-hidden="true"></div>
+        <header class="institution-header">
+          <div class="swpu-wordmark" aria-label="西南石油大学">
+            <img class="swpu-official-logo" src="assets/swpu-official-logo.png" alt="西南石油大学官方校标">
+          </div>
+          <div class="institution-type mono"><span>ACKNOWLEDGEMENTS</span><b>2026</b></div>
+        </header>
+        <div class="thanks-center" data-audit-bound>
+          <p class="institution-kicker mono">AUTO RESEARCH × FOREAGENT</p>
+          <h1>感谢聆听</h1>
+          <p class="thanks-title-en">THANK YOU FOR YOUR ATTENTION</p>
+          <p class="thanks-subtitle">感谢王志文老师的指导，也感谢团队同学在实验、比赛与讨论中的协作。</p>
+          <div class="thanks-rule"><i></i><span>敬请批评指正</span><i></i></div>
+          <a class="thanks-email" href="mailto:3183879036@qq.com">3183879036@qq.com</a>
+        </div>
+        <div class="thanks-footer" data-audit-bound><span>科研主线</span><b>Auto Research 架构优化</b><i></i><span>实践主线</span><b>算法竞赛与 Kaggle</b></div>
+        <svg class="institution-skyline" viewBox="0 0 1600 260" aria-hidden="true">
+          <path d="M0 224H1600M90 224V176H220V224M128 176V136H182V176M390 224V162H478V224M412 162V124H455V162M612 224V190H770V224M654 190V150H724V190M936 224V168H1060V224M976 168V116H1020V168M1200 224V184H1324V224M1232 184V142H1290V184"/>
+          <path d="M1324 224L1410 62L1496 224M1360 224L1410 130L1460 224M1410 62V224M1382 116H1438M1358 162H1462"/>
+          <path d="M1410 62C1444 40 1474 42 1504 58" class="skyline-signal"/>
+        </svg>
+        <div class="institution-page mono">SWPU · 31</div>
+      </section>
+    </main>
+
+    <div class="deck-ui" id="deck-ui" aria-label="演示控制">
+      <button type="button" data-action="prev" aria-label="上一页">←</button>
+      <button type="button" data-action="next" aria-label="下一页">→</button>
+      <button type="button" data-action="reset" aria-label="重置镜头">R</button>
+      <button type="button" data-action="overview" aria-label="总览">O</button>
+      <button type="button" data-action="fullscreen" aria-label="全屏">F</button>
+      <span class="deck-ui-divider" aria-hidden="true"></span>
+      <button type="button" class="review-toggle" data-action="review" aria-label="开启批改者模式" aria-pressed="false">批改</button>
+    </div>
+    <div class="review-tools" id="review-tools" aria-label="批改者工具" hidden>
+      <button type="button" data-review-action="pen" class="active" aria-label="画笔">画笔</button>
+      <label aria-label="画笔颜色"><input id="review-color" type="color" value="#ef4444"></label>
+      <label class="review-width" aria-label="画笔粗细"><input id="review-width" type="range" min="2" max="18" value="6"></label>
+      <button type="button" data-review-action="eraser" aria-label="橡皮擦">橡皮</button>
+      <button type="button" data-review-action="undo" aria-label="撤销">撤销</button>
+      <button type="button" data-review-action="clear" aria-label="清空当前页">清空</button>
+      <span>临时保留 · 刷新清空</span>
+    </div>
+    <div class="overview" id="overview" hidden><div class="overview-panel"><div class="overview-head"><span>SLIDE OVERVIEW</span><button type="button" data-action="overview-close">×</button></div><div class="overview-grid" id="overview-grid"></div></div></div>
+    <div class="help-toast" id="help-toast"><span>SPACE / → 推进镜头或翻页</span><span>滚轮缩放 · 拖动平移 · Esc 复位</span></div>
+    <output id="qa-report" hidden></output>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

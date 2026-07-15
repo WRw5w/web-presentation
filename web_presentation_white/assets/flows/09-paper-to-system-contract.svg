@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" role="img" aria-labelledby="title desc">
+  <title id="title">论文到项目的接入契约</title>
+  <desc id="desc">ForeAgent 只在推理平面分配预算，真实训练、回执、评估和 Journal 写回仍由执行控制面负责。</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#0f172a" flood-opacity=".08"/></filter>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#6d5bd0"/></marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#047857"/></marker>
+    <style>
+      text{font-family:"Microsoft YaHei UI","Microsoft YaHei",sans-serif;fill:#0f172a}
+      .mono{font-family:"Cascadia Mono","Consolas",monospace;letter-spacing:1.5px}.small{font-size:13px}.body{font-size:15px}.title{font-size:19px;font-weight:700}.muted{fill:#64748b}
+      .reason-line{fill:none;stroke:#6d5bd0;stroke-width:2}.exec-line{fill:none;stroke:#047857;stroke-width:2}
+    </style>
+  </defs>
+
+  <rect x="28" y="24" width="1384" height="220" rx="20" fill="#faf8ff" stroke="#c9c0f4"/>
+  <text x="56" y="58" class="mono small" fill="#6d5bd0">REASONING PLANE · NO REAL SIDE EFFECTS</text>
+  <rect x="1138" y="40" width="238" height="34" rx="17" fill="#eeeafd"/>
+  <text x="1257" y="62" text-anchor="middle" class="small" font-weight="700" fill="#6d5bd0">权限：推荐与预算分配</text>
+
+  <path d="M252 153H300" class="reason-line" marker-end="url(#arrow-purple)"/>
+  <path d="M526 153H574" class="reason-line" marker-end="url(#arrow-purple)"/>
+  <path d="M800 153H848" class="reason-line" marker-end="url(#arrow-purple)"/>
+  <path d="M1074 153H1122" class="reason-line" marker-end="url(#arrow-purple)"/>
+
+  <g filter="url(#shadow)"><rect x="58" y="98" width="194" height="110" rx="15" fill="#ffffff" stroke="#b9aff0"/></g>
+  <text x="155" y="133" text-anchor="middle" class="mono small" fill="#6d5bd0">TRIGGER</text>
+  <text x="155" y="164" text-anchor="middle" class="title">可信停滞</text>
+  <text x="155" y="190" text-anchor="middle" class="small muted">真实评估持续无改进</text>
+
+  <g filter="url(#shadow)"><rect x="300" y="98" width="226" height="110" rx="15" fill="#ffffff" stroke="#b9aff0"/></g>
+  <text x="413" y="133" text-anchor="middle" class="mono small" fill="#6d5bd0">EXPAND</text>
+  <text x="413" y="164" text-anchor="middle" class="title">Improve 候选扩展</text>
+  <text x="413" y="190" text-anchor="middle" class="small muted">一次生成 m=10</text>
+
+  <g filter="url(#shadow)"><rect x="574" y="98" width="226" height="110" rx="15" fill="#ffffff" stroke="#b9aff0"/></g>
+  <text x="687" y="133" text-anchor="middle" class="mono small" fill="#6d5bd0">FILTER</text>
+  <text x="687" y="164" text-anchor="middle" class="title">Pairwise + c=0.7</text>
+  <text x="687" y="190" text-anchor="middle" class="small muted">低置信度双方保留</text>
+
+  <g filter="url(#shadow)"><rect x="848" y="98" width="226" height="110" rx="15" fill="#ffffff" stroke="#b9aff0"/></g>
+  <text x="961" y="133" text-anchor="middle" class="mono small" fill="#6d5bd0">RECOMMEND</text>
+  <text x="961" y="164" text-anchor="middle" class="title">推荐 Top-k</text>
+  <text x="961" y="190" text-anchor="middle" class="small muted">默认 k=1</text>
+
+  <g filter="url(#shadow)"><rect x="1122" y="98" width="250" height="110" rx="15" fill="#fff7f8" stroke="#e5a5b5"/></g>
+  <text x="1247" y="133" text-anchor="middle" class="mono small" fill="#be123c">FORBIDDEN</text>
+  <text x="1247" y="164" text-anchor="middle" class="title">不能直接写真实状态</text>
+  <text x="1247" y="190" text-anchor="middle" class="small muted">不能跳过 evaluator</text>
+
+  <line x1="28" y1="278" x2="1412" y2="278" stroke="#c3922f" stroke-width="2" stroke-dasharray="9 8"/>
+  <rect x="563" y="258" width="314" height="40" rx="20" fill="#fffaf0" stroke="#d9bd7d"/>
+  <text x="720" y="283" text-anchor="middle" class="mono small" font-weight="700" fill="#a16207">PERMISSION BOUNDARY · EXACT INTENT</text>
+
+  <path d="M961 208V328" class="reason-line" marker-end="url(#arrow-green)"/>
+
+  <rect x="28" y="312" width="1384" height="220" rx="20" fill="#f4fcf8" stroke="#9bd0bd"/>
+  <text x="56" y="346" class="mono small" fill="#047857">EXECUTION PLANE · REAL SIDE EFFECTS</text>
+  <rect x="1138" y="328" width="238" height="34" rx="17" fill="#e4f6ee"/>
+  <text x="1257" y="350" text-anchor="middle" class="small" font-weight="700" fill="#047857">权限：执行、验证与写回</text>
+
+  <path d="M270 434H318" class="exec-line" marker-end="url(#arrow-green)"/>
+  <path d="M544 434H592" class="exec-line" marker-end="url(#arrow-green)"/>
+  <path d="M818 434H866" class="exec-line" marker-end="url(#arrow-green)"/>
+  <path d="M1092 434H1140" class="exec-line" marker-end="url(#arrow-green)"/>
+
+  <g filter="url(#shadow)"><rect x="58" y="379" width="212" height="110" rx="15" fill="#ffffff" stroke="#8bcbb5"/></g>
+  <text x="164" y="414" text-anchor="middle" class="mono small" fill="#047857">CONTROLLED INTENT</text>
+  <text x="164" y="445" text-anchor="middle" class="title">版本化执行请求</text>
+  <text x="164" y="471" text-anchor="middle" class="small muted">实验 ID · 代码哈希</text>
+
+  <g filter="url(#shadow)"><rect x="318" y="379" width="226" height="110" rx="15" fill="#ffffff" stroke="#8bcbb5"/></g>
+  <text x="431" y="414" text-anchor="middle" class="mono small" fill="#047857">REAL RUN</text>
+  <text x="431" y="445" text-anchor="middle" class="title">真实训练 / 验证</text>
+  <text x="431" y="471" text-anchor="middle" class="small muted">GPU 与远程 worker</text>
+
+  <g filter="url(#shadow)"><rect x="592" y="379" width="226" height="110" rx="15" fill="#ffffff" stroke="#8bcbb5"/></g>
+  <text x="705" y="414" text-anchor="middle" class="mono small" fill="#047857">PROVENANCE</text>
+  <text x="705" y="445" text-anchor="middle" class="title">Artifact + Receipt</text>
+  <text x="705" y="471" text-anchor="middle" class="small muted">状态与产物可追溯</text>
+
+  <g filter="url(#shadow)"><rect x="866" y="379" width="226" height="110" rx="15" fill="#ffffff" stroke="#8bcbb5"/></g>
+  <text x="979" y="414" text-anchor="middle" class="mono small" fill="#047857">TRUSTED TRUTH</text>
+  <text x="979" y="445" text-anchor="middle" class="title">真实 Evaluator</text>
+  <text x="979" y="471" text-anchor="middle" class="small muted">最终裁决指标与错误</text>
+
+  <g filter="url(#shadow)"><rect x="1140" y="379" width="232" height="110" rx="15" fill="#ffffff" stroke="#8bcbb5"/></g>
+  <text x="1256" y="414" text-anchor="middle" class="mono small" fill="#047857">MEMORY</text>
+  <text x="1256" y="445" text-anchor="middle" class="title">写回 AIDE Journal</text>
+  <text x="1256" y="471" text-anchor="middle" class="small muted">事实驱动下一轮判断</text>
+</svg>
