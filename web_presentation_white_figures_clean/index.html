@@ -729,7 +729,51 @@
       </section>
       </template>
 
-      <!-- 29 / DATA-CENTRIC IMPROVEMENT -->
+      <!-- 29 / IMPROVEMENT PATHS -->
+      <section class="slide improvement-paths-slide" data-section="07 / NEXT IMPROVEMENT" data-title="下一步：如何继续改进">
+        <div class="slide-body improvement-paths-layout" data-audit-bound>
+          <div class="title-row"><div><p class="eyebrow reasoning-text">NEXT / TWO IMPROVEMENT TRACKS</p><h2>下一步：如何继续<span class="accent-reasoning">改进</span>？</h2></div><p class="title-note">一条优化判断器；<br>一条优化 Agent 系统。</p></div>
+          <div class="improvement-columns">
+            <article class="improvement-track benchmark-track">
+              <header><span>左 / 方案识别榜单</span><h3>提升“哪个方案更好”的判断能力</h3></header>
+              <div class="improvement-options">
+                <div><span>01</span><strong>传统深度学习</strong><p>训练专门的排序器或分类器，直接学习方案特征与真实结果之间的映射。</p></div>
+                <div><span>02</span><strong>LoRA 微调</strong><p>用偏好方案对低成本微调开源模型，让模型适配代码与任务判断。</p></div>
+                <div><span>03</span><strong>后训练模型</strong><p>通过偏好优化或奖励建模，进一步提升细粒度方案比较能力。</p></div>
+              </div>
+              <footer><span>目标</span><b>更高准确率 · 更好校准 · 更稳定泛化</b></footer>
+            </article>
+            <article class="improvement-track aide-track">
+              <header><span>右 / AIDE 系统</span><h3>提升“预测如何进入搜索”的系统能力</h3></header>
+              <div class="aide-improvement-flow">
+                <div><span>01 / PROCESS</span><strong>增加中间处理环节</strong><p>在代码和 World Model 之间加入数据验证、报告压缩、候选去重与证据整理。</p></div>
+                <i>+</i>
+                <div><span>02 / MODEL</span><strong>接到更先进的模型上</strong><p>把 ForeAgent 模块缝到能力更强、推理更稳定的新模型之上。</p></div>
+              </div>
+              <div class="aide-improvement-chain"><span>AIDE Journal</span><i>→</i><strong>中间处理层</strong><i>→</i><b>先进模型</b><i>→</i><span>Top-k 真实验证</span></div>
+              <footer><span>目标</span><b>更干净的上下文 · 更可靠的筛选 · 更低接入成本</b></footer>
+            </article>
+          </div>
+          <div class="improvement-verdict"><strong>模型路线与系统路线可以并行推进</strong><span>左侧提高“会不会判断”，右侧提高“判断结果能不能安全地产生价值”。</span></div>
+        </div>
+      </section>
+
+      <!-- 30 / FIVE-LAYER RANKING ARCHITECTURE -->
+      <section class="slide ranking-architecture-slide" data-section="07 / NEXT IMPROVEMENT" data-title="五层方案识别优化架构">
+        <div class="slide-body ranking-architecture-layout" data-audit-bound>
+          <div class="title-row"><div><p class="eyebrow reasoning-text">RANKING SYSTEM / FIVE LAYERS</p><h2>方案识别榜单的<span class="accent-reasoning">五层优化架构</span></h2></div><p class="title-note">从结构化输入到选择性升级<br>兼顾准确率、成本与置信度</p></div>
+          <div class="ranking-layers">
+            <article><header><b>01</b><span>结构化特征提取</span></header><div><strong>任务 / 数据</strong><i>→</i><p>Meta-features</p><strong>代码</strong><i>→</i><p>AST + 建模策略特征</p></div></article>
+            <article><header><b>02</b><span>基础模型</span></header><div class="layer-tags"><p>LightGBM / XGBoost</p><p>深度 Pairwise Ranker</p><p>强 LLM Judge</p></div></article>
+            <article><header><b>03</b><span>一致性优化</span></header><div class="layer-tags"><p>A/B 交换增强</p><p>传递性约束</p><p>Listwise 排序约束</p><p>难例挖掘</p></div></article>
+            <article><header><b>04</b><span>融合</span></header><div class="layer-tags"><p>OOF Stacking</p><p>任务领域专家路由</p><p>置信度校准</p></div></article>
+            <article class="ranking-layer-final"><header><b>05</b><span>选择性升级</span></header><div><p><em>高置信度</em>直接输出</p><p><em>中置信度</em>使用融合结果</p><p><em>低置信度</em>调用更强 LLM 或少量弱执行</p></div></article>
+          </div>
+          <div class="ranking-architecture-foot"><span>核心原则</span><strong>简单样本低成本处理，困难样本才逐级升级计算预算。</strong></div>
+        </div>
+      </section>
+
+      <!-- 31 / DATA-CENTRIC IMPROVEMENT -->
       <section class="slide data-improvement-slide" data-section="07 / NEXT IMPROVEMENT" data-title="从数据处理入手做改进">
         <div class="slide-body data-improvement-layout" data-audit-bound>
           <div class="title-row"><div><p class="eyebrow evidence-text">DATA-CENTRIC IMPROVEMENT</p><h2>从<span class="accent-evidence">数据处理</span>入手做改进</h2></div><p class="title-note">先补信息，再谈更强模型<br>让输入更接近真实执行世界</p></div>
@@ -791,35 +835,6 @@
             </table>
           </div>
           <figure class="repro-discussion-evidence"><img src="assets/evidence/discussion-6-1-static-prediction-limit.png" alt="论文讨论 6.1：静态预测的间接上限与 72.2% 结果解释"></figure>
-        </div>
-      </section>
-
-      <!-- 31 / IMPROVEMENT PATHS -->
-      <section class="slide improvement-paths-slide" data-section="07 / NEXT IMPROVEMENT" data-title="下一步：如何继续改进">
-        <div class="slide-body improvement-paths-layout" data-audit-bound>
-          <div class="title-row"><div><p class="eyebrow reasoning-text">NEXT / TWO IMPROVEMENT TRACKS</p><h2>下一步：如何继续<span class="accent-reasoning">改进</span>？</h2></div><p class="title-note">一条优化判断器；<br>一条优化 Agent 系统。</p></div>
-          <div class="improvement-columns">
-            <article class="improvement-track benchmark-track">
-              <header><span>左 / 方案识别榜单</span><h3>提升“哪个方案更好”的判断能力</h3></header>
-              <div class="improvement-options">
-                <div><span>01</span><strong>传统深度学习</strong><p>训练专门的排序器或分类器，直接学习方案特征与真实结果之间的映射。</p></div>
-                <div><span>02</span><strong>LoRA 微调</strong><p>用偏好方案对低成本微调开源模型，让模型适配代码与任务判断。</p></div>
-                <div><span>03</span><strong>后训练模型</strong><p>通过偏好优化或奖励建模，进一步提升细粒度方案比较能力。</p></div>
-              </div>
-              <footer><span>目标</span><b>更高准确率 · 更好校准 · 更稳定泛化</b></footer>
-            </article>
-            <article class="improvement-track aide-track">
-              <header><span>右 / AIDE 系统</span><h3>提升“预测如何进入搜索”的系统能力</h3></header>
-              <div class="aide-improvement-flow">
-                <div><span>01 / PROCESS</span><strong>增加中间处理环节</strong><p>在代码和 World Model 之间加入数据验证、报告压缩、候选去重与证据整理。</p></div>
-                <i>+</i>
-                <div><span>02 / MODEL</span><strong>接到更先进的模型上</strong><p>把 ForeAgent 模块缝到能力更强、推理更稳定的新模型之上。</p></div>
-              </div>
-              <div class="aide-improvement-chain"><span>AIDE Journal</span><i>→</i><strong>中间处理层</strong><i>→</i><b>先进模型</b><i>→</i><span>Top-k 真实验证</span></div>
-              <footer><span>目标</span><b>更干净的上下文 · 更可靠的筛选 · 更低接入成本</b></footer>
-            </article>
-          </div>
-          <div class="improvement-verdict"><strong>模型路线与系统路线可以并行推进</strong><span>左侧提高“会不会判断”，右侧提高“判断结果能不能安全地产生价值”。</span></div>
         </div>
       </section>
 

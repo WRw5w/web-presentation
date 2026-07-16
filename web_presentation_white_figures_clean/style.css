@@ -622,6 +622,26 @@ html[data-export="true"] .deck-ui, html[data-export="true"] .help-toast { displa
 .innovation-table-foot { display: flex; align-items: center; gap: 22px; margin-top: 22px; padding: 20px 24px; border-left: 5px solid var(--reasoning); background: linear-gradient(90deg, #f1efff, #fafaff); }
 .innovation-table-foot span { color: var(--muted); font: 12px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
 .innovation-table-foot strong { color: var(--ink); font-size: 21px; }
+
+.ranking-architecture-layout { display: flex; flex-direction: column; }
+.ranking-layers { display: grid; gap: 9px; margin-top: 28px; }
+.ranking-layers article { display: grid; grid-template-columns: 265px 1fr; min-height: 88px; border: 1px solid #ddd9f3; background: rgba(255,255,255,.95); box-shadow: 0 8px 22px rgba(67,56,168,.05); }
+.ranking-layers article header { display: flex; align-items: center; gap: 18px; padding: 18px 22px; color: #fff; background: linear-gradient(115deg, #4034a3, #6657d6); }
+.ranking-layers article header b { display: grid; place-items: center; width: 35px; height: 35px; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; font: 750 13px/1 var(--mono); }
+.ranking-layers article header span { font-size: 22px; font-weight: 750; }
+.ranking-layers article > div { display: flex; align-items: center; gap: 14px; padding: 15px 24px; }
+.ranking-layers article > div strong { color: #334155; font-size: 16px; }
+.ranking-layers article > div i { color: var(--reasoning); font-style: normal; font-size: 23px; }
+.ranking-layers article > div p { margin: 0; color: var(--ink); font-size: 17px; }
+.ranking-layers .layer-tags { flex-wrap: wrap; }
+.ranking-layers .layer-tags p { padding: 9px 15px; border: 1px solid #ddd9f3; border-radius: 18px; background: #f8f7ff; }
+.ranking-layers .ranking-layer-final { border-color: #9f93ed; background: #f1efff; }
+.ranking-layers .ranking-layer-final > div { justify-content: space-between; }
+.ranking-layers .ranking-layer-final p { font-size: 16px; }
+.ranking-layers .ranking-layer-final em { margin-right: 8px; color: var(--reasoning); font-style: normal; font-weight: 800; }
+.ranking-architecture-foot { display: flex; align-items: center; gap: 22px; margin-top: 18px; padding: 16px 22px; border-left: 5px solid var(--reasoning); background: #f8fafc; }
+.ranking-architecture-foot span { color: var(--muted); font: 12px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.ranking-architecture-foot strong { color: var(--ink); font-size: 20px; }
 .cost-main { display: grid; grid-template-columns: 1fr 70px 1fr; gap: 20px; align-items: stretch; margin-top: 44px; }
 .cost-main article { padding: 30px 34px; border: 1px solid var(--line); background: #fff; }
 .cost-main article > span { color: var(--muted); }
