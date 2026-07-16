@@ -25,10 +25,10 @@ flowchart TB
         direction LR
         subgraph C["C · Augmentation｜数据报告增强"]
             direction LR
-            C1["训练数据 + 代码"]
-            C2["① Profiling<br/>数据与方案画像"]
-            C3["② Verification<br/>执行日志 + 专家检查"]
-            C4["③ Verbalization<br/><b>Verified Data Report</b>"]
+            C1["GPT 根据任务背景<br/>挑选统计指标 · 设计脚本"]
+            C2["执行脚本<br/>得到统计量"]
+            C3["GPT 结合任务背景<br/>解释统计结果"]
+            C4["生成统计报告<br/><b>Verified Data Report</b>"]
             C1 --> C2 --> C3 --> C4
         end
 
