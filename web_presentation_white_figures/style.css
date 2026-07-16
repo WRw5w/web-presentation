@@ -641,6 +641,21 @@ html[data-export="true"] .deck-ui, html[data-export="true"] .help-toast { displa
 .cost-scenario.full header { background: var(--reasoning); }
 .cost-scenario header span { font: 13px/1 var(--mono); letter-spacing: .12em; }
 .cost-scenario header strong { font-size: 23px; }
+
+.gpu-budget-layout { display: flex; flex-direction: column; justify-content: center; }
+.gpu-budget-card { margin-top: 46px; border: 1px solid #cbd5e1; background: rgba(255,255,255,.9); box-shadow: 0 18px 48px rgba(15,23,42,.08); }
+.gpu-budget-head, .gpu-budget-row { display: grid; grid-template-columns: 2.2fr .7fr 1.9fr 1.55fr 1fr; align-items: center; column-gap: 18px; padding: 22px 28px; }
+.gpu-budget-head { color: #fff; background: #334155; font: 13px/1 var(--mono); letter-spacing: .08em; }
+.gpu-budget-row { min-height: 108px; border-top: 1px solid #e2e8f0; color: var(--ink); font-size: 20px; }
+.gpu-budget-row strong { font-size: 24px; }
+.gpu-budget-row span { line-height: 1.35; }
+.gpu-budget-row small { color: var(--muted); font-size: 15px; }
+.gpu-budget-row.featured { background: #ecfdf5; }
+.gpu-price { color: var(--reasoning); font-size: 30px; white-space: nowrap; }
+.gpu-budget-foot { display: flex; align-items: center; gap: 22px; margin-top: 28px; padding: 18px 24px; color: var(--muted); background: #f8fafc; border-left: 4px solid var(--reasoning); }
+.gpu-budget-foot span:first-child { font: 13px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.gpu-budget-foot strong { color: var(--reasoning); font-size: 23px; }
+.gpu-budget-foot i { color: var(--reasoning); font-style: normal; font-size: 28px; }
 .cost-line { display: grid; grid-template-columns: 1fr 1fr auto; align-items: center; gap: 14px; padding: 25px 26px; border-bottom: 1px solid #e2e8f0; }
 .cost-line span { color: var(--muted); font-size: 16px; }
 .cost-line b { color: #475569; font: 15px/1.2 var(--mono); }
