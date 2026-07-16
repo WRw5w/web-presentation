@@ -686,9 +686,9 @@ html[data-export="true"] .deck-ui, html[data-export="true"] .help-toast { displa
 .data-improvement-paths article strong { display: block; margin-top: 22px; color: var(--ink); font-size: 25px; }
 .data-improvement-paths article p { margin-top: 14px; color: var(--muted); font-size: 17px; line-height: 1.55; }
 .data-improvement-paths > i { align-self: center; color: var(--evidence); font-style: normal; font-size: 34px; }
-.data-improvement-foot { display: grid; grid-template-columns: 455px 1fr; align-items: center; gap: 28px; margin-top: 24px; padding: 14px 20px; border-left: 4px solid var(--evidence); background: #ecfdf5; }
-.data-improvement-foot figure { height: 60px; margin: 0; overflow: hidden; }
-.data-improvement-foot img { width: 100%; height: 60px; object-fit: contain; object-position: left center; }
+.data-improvement-foot { display: grid; grid-template-columns: 600px 1fr; align-items: center; gap: 28px; margin-top: 24px; padding: 14px 20px; border-left: 4px solid var(--evidence); background: #ecfdf5; }
+.data-improvement-foot figure { height: 88px; margin: 0; overflow: hidden; }
+.data-improvement-foot img { width: 100%; height: 88px; object-fit: contain; object-position: left center; }
 .data-improvement-foot strong { color: var(--ink); font-size: 20px; line-height: 1.45; }
 .cost-line { display: grid; grid-template-columns: 1fr 1fr auto; align-items: center; gap: 14px; padding: 25px 26px; border-bottom: 1px solid #e2e8f0; }
 .cost-line span { color: var(--muted); font-size: 16px; }
