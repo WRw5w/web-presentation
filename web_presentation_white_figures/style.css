@@ -668,6 +668,20 @@ html[data-export="true"] .deck-ui, html[data-export="true"] .help-toast { displa
 .memory-table tbody tr.memory-featured { background: #ecfdf5; }
 .memory-table-foot { display: flex; gap: 18px; align-items: center; margin-top: 22px; padding: 14px 20px; border-left: 4px solid var(--observer); background: #f8fafc; }
 .memory-table-foot span { font: 12px/1 var(--mono); letter-spacing: .1em; color: var(--muted); text-transform: uppercase; } .memory-table-foot strong { color: var(--ink); font-size: 19px; }
+
+.data-improvement-layout { display: flex; flex-direction: column; }
+.data-improvement-evidence { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 28px; }
+.data-improvement-evidence figure { display: flex; align-items: center; height: 122px; margin: 0; padding: 10px 14px; overflow: hidden; border: 1px solid #cbd5e1; background: #fff; }
+.data-improvement-evidence img { width: 100%; height: 100%; object-fit: contain; }
+.data-improvement-paths { display: grid; grid-template-columns: 1fr 38px 1fr 38px 1fr; align-items: stretch; gap: 12px; margin-top: 28px; }
+.data-improvement-paths article { min-height: 190px; padding: 24px 26px; border-top: 4px solid var(--evidence); background: #fff; box-shadow: 0 14px 34px rgba(15,23,42,.07); }
+.data-improvement-paths article span { color: var(--muted); font: 12px/1 var(--mono); letter-spacing: .08em; }
+.data-improvement-paths article strong { display: block; margin-top: 22px; color: var(--ink); font-size: 25px; }
+.data-improvement-paths article p { margin-top: 14px; color: var(--muted); font-size: 17px; line-height: 1.55; }
+.data-improvement-paths > i { align-self: center; color: var(--evidence); font-style: normal; font-size: 34px; }
+.data-improvement-foot { display: grid; grid-template-columns: 455px 1fr; align-items: center; gap: 28px; margin-top: 24px; padding: 14px 20px; border-left: 4px solid var(--evidence); background: #ecfdf5; }
+.data-improvement-foot img { width: 100%; height: 60px; object-fit: contain; object-position: left center; }
+.data-improvement-foot strong { color: var(--ink); font-size: 20px; line-height: 1.45; }
 .cost-line { display: grid; grid-template-columns: 1fr 1fr auto; align-items: center; gap: 14px; padding: 25px 26px; border-bottom: 1px solid #e2e8f0; }
 .cost-line span { color: var(--muted); font-size: 16px; }
 .cost-line b { color: #475569; font: 15px/1.2 var(--mono); }
