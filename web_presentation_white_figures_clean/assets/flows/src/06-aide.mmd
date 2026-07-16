@@ -1,0 +1,20 @@
+flowchart TD
+    A["开始一个实验目标"] --> B["AIDE Journal<br/>记录实验经验、结果与当前最优解"]
+
+    B --> C{"还有实验步数吗？"}
+    C -- 否 --> Z["结束：交付当前最优方案"]
+
+    C -- 是 --> D["根据 Journal 判断下一步"]
+
+    D --> E1["Draft<br/>提出初始方案"]
+    D --> E2["Debug<br/>修复失败与实现问题"]
+    D --> E3["Improve<br/>改进已有可运行方案"]
+
+    E1 --> F["真实执行训练 / 验证"]
+    E2 --> F
+    E3 --> G["ForeAgent 创新节点<br/>Predict-then-Verify"]
+    G --> F
+
+    F --> H["读取指标、错误与真实反馈"]
+    H --> I["写回 AIDE Journal"]
+    I --> C
