@@ -670,6 +670,9 @@ html[data-export="true"] .deck-ui, html[data-export="true"] .help-toast { displa
 .memory-table-foot span { font: 12px/1 var(--mono); letter-spacing: .1em; color: var(--muted); text-transform: uppercase; } .memory-table-foot strong { color: var(--ink); font-size: 19px; }
 
 .data-improvement-layout { display: flex; flex-direction: column; }
+.data-improvement-global { height: 560px; margin-top: 28px; overflow: hidden; cursor: grab; }
+.data-improvement-global:active { cursor: grabbing; }
+.data-improvement-world { width: 100%; height: 100%; transform-origin: center center; }
 .data-improvement-evidence { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 28px; }
 .data-improvement-evidence figure { display: flex; align-items: center; height: 122px; margin: 0; padding: 10px 14px; overflow: hidden; border: 1px solid #cbd5e1; background: #fff; }
 .data-improvement-evidence img { width: 100%; height: 100%; object-fit: contain; }
