@@ -656,6 +656,18 @@ html[data-export="true"] .deck-ui, html[data-export="true"] .help-toast { displa
 .gpu-budget-foot span:first-child { font: 13px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
 .gpu-budget-foot strong { color: var(--reasoning); font-size: 23px; }
 .gpu-budget-foot i { color: var(--reasoning); font-style: normal; font-size: 28px; }
+
+.memory-comparison-layout { display: flex; flex-direction: column; justify-content: center; }
+.memory-table-wrap { margin-top: 34px; border: 1px solid #cbd5e1; background: rgba(255,255,255,.92); box-shadow: 0 16px 42px rgba(15,23,42,.07); }
+.memory-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 13px; line-height: 1.32; }
+.memory-table th, .memory-table td { padding: 13px 12px; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; vertical-align: top; text-align: left; }
+.memory-table thead th { color: #fff; background: #334155; font: 12px/1.2 var(--mono); letter-spacing: .04em; }
+.memory-table thead th:nth-child(1) { width: 13%; } .memory-table thead th:nth-child(2) { width: 18%; } .memory-table thead th:nth-child(3) { width: 21%; } .memory-table thead th:nth-child(4) { width: 20%; } .memory-table thead th:nth-child(5) { width: 13%; } .memory-table thead th:nth-child(6) { width: 15%; }
+.memory-table tbody th { color: var(--ink); font-size: 14px; font-weight: 750; }
+.memory-table tbody tr:last-child th, .memory-table tbody tr:last-child td { border-bottom: 0; }
+.memory-table tbody tr.memory-featured { background: #ecfdf5; }
+.memory-table-foot { display: flex; gap: 18px; align-items: center; margin-top: 22px; padding: 14px 20px; border-left: 4px solid var(--observer); background: #f8fafc; }
+.memory-table-foot span { font: 12px/1 var(--mono); letter-spacing: .1em; color: var(--muted); text-transform: uppercase; } .memory-table-foot strong { color: var(--ink); font-size: 19px; }
 .cost-line { display: grid; grid-template-columns: 1fr 1fr auto; align-items: center; gap: 14px; padding: 25px 26px; border-bottom: 1px solid #e2e8f0; }
 .cost-line span { color: var(--muted); font-size: 16px; }
 .cost-line b { color: #475569; font: 15px/1.2 var(--mono); }

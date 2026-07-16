@@ -798,7 +798,26 @@
         </div>
       </section>
 
-      <!-- 32 / RESEARCH COST -->
+      <!-- 32 / MEMORY SYSTEM COMPARISON -->
+      <section class="slide memory-comparison-slide" data-section="08 / REPRODUCTION" data-title="不同 Agent 系统的记忆机制对比">
+        <div class="slide-body memory-comparison-layout" data-audit-bound>
+          <div class="title-row"><div><p class="eyebrow observer-text">MEMORY SYSTEMS / COMPARISON</p><h2>不同 Agent 的 <span class="accent-observer">记忆机制</span>怎么做？</h2></div><p class="title-note">压缩后的横向对比<br>重点看检索、更新与持久化</p></div>
+          <div class="memory-table-wrap">
+            <table class="memory-table"><thead><tr><th>系统</th><th>记忆类型</th><th>检索 / 索引</th><th>压缩与增量更新</th><th>持久化</th><th>成本影响</th></tr></thead><tbody>
+              <tr><th>AIDE</th><td>搜索树短期记忆；摘要算子</td><td>读取最佳 / 候选节点摘要；树元数据</td><td>摘要历史节点；按搜索步追加</td><td>跨会话未说明</td><td>提示开销较低；精确值未公开</td></tr>
+              <tr><th>MLE-STAR</th><td>外部知识 + previous attempts</td><td>Web 搜索、计划历史、代码块消融</td><td>消融总结；每轮 refinement 追加</td><td>知识库未说明</td><td>搜索与 checker 增加时延和资源</td></tr>
+              <tr><th>ML-Master</th><td>选择性作用域短期记忆</td><td>父节点 + 同层兄弟；搜索树结构</td><td>抽取 salient insights；节点写回</td><td>分支一致性强；跨会话未说明</td><td>控制 prompt，减少 reasoning overload</td></tr>
+              <tr class="memory-featured"><th>ML-Master 2.0</th><td>Experience / Knowledge / Wisdom 分层长期记忆</td><td>先检索 prior wisdom；phase boundary consolidation</td><td>context migration；经验蒸馏并晋升</td><td>显式长期稳定知识</td><td>上下文约 20万+ → 约 7万 token</td></tr>
+              <tr><th>ReasoningBank</th><td>成败经验的 reasoning memory</td><td>检索结构化 reasoning item</td><td>成功 / 失败轨迹蒸馏；持续写入</td><td>面向部署后持续学习</td><td>提升 success rate，减少 task steps</td></tr>
+              <tr><th>MTL</th><td>跨域统一 memory pool</td><td>任务 / memory embedding cosine；top-k</td><td>Trajectory / Workflow / Summary / Insight</td><td>可跨模型、跨域迁移</td><td>仅检索 3 条；431 条优于 5.8k</td></tr>
+              <tr><th>CBR-R&amp;D</th><td>持久案例记忆</td><td>embedding + code fingerprint + provenance</td><td>五道质量门控；三阶段更新</td><td>跨会话持久化；可读文件</td><td>检索与质量检查增加开销</td></tr>
+            </tbody></table>
+          </div>
+          <div class="memory-table-foot"><span>观察</span><strong>从“搜索树内摘要”逐步走向“可迁移、可持久化的经验库”。</strong></div>
+        </div>
+      </section>
+
+      <!-- 33 / RESEARCH COST -->
       <section class="slide research-cost-slide" data-section="08 / REPRODUCTION" data-title="研究成本：消耗的是中转站 Pro 额度">
         <div class="slide-body research-cost-layout" data-audit-bound>
           <div class="title-row"><div><p class="eyebrow reasoning-text">RESEARCH COST / FULL REPRODUCTION</p><h2>从本次复现，估算<span class="accent-reasoning">全量实验成本</span></h2></div><p class="title-note">中转站 Pro 换算口径<br>¥0.17 / $1 平台额度</p></div>
