@@ -756,13 +756,19 @@
       <section class="slide innovation-directions-slide" data-section="07 / NEXT IMPROVEMENT" data-title="可能的创新点：五条可落地路线">
         <div class="slide-body innovation-directions-layout" data-audit-bound>
           <div class="title-row"><div><p class="eyebrow reasoning-text">POSSIBLE INNOVATIONS / DIRECTIONS</p><h2>可能的创新点：五条<span class="accent-reasoning">可落地路线</span></h2></div><p class="title-note">从 Pairwise Judge<br>继续走向搜索价值模型。</p></div>
-          <div class="innovation-directions-content">
-            <div class="innovation-direction-index">
-              <span><b>01</b>轨迹价值模型</span><span><b>02</b>Validation-Test Gap</span><span><b>03</b>Judge → Editor</span><span><b>04</b>跨任务检索增强</span><span><b>05</b>轻量奖励模型</span>
-              <strong>核心变化：从“选谁”扩展到“未来值不值得继续、应该怎样改”。</strong>
-            </div>
-            <figure class="innovation-directions-shot"><img src="assets/innovation/05-innovation-directions.png" alt="轨迹价值模型、验证测试差距、反事实修正、跨任务检索与轻量奖励模型等创新方向"></figure>
+          <div class="innovation-table-wrap">
+            <table class="innovation-table">
+              <thead><tr><th>创新路线</th><th>要解决的问题</th><th>核心方法</th><th>主要评估指标</th></tr></thead>
+              <tbody>
+                <tr><th><b>01</b>轨迹价值模型</th><td>当前节点未来是否仍有改进潜力？</td><td>基于代码、父子差分、数据报告和局部验证结果，预测未来 H 步收益。</td><td>Future Gain Correlation<br>Test Improve Rate</td></tr>
+                <tr><th><b>02</b>Validation-Test Gap</th><td>本地验证分数是否值得信任？</td><td>单独建模泛化差距，结合数据属性、验证方案、代码结构和特征工程强度。</td><td>Gap 排序相关<br>错误验证拒识率</td></tr>
+                <tr><th><b>03</b>Judge → Editor</th><td>不仅判断“选谁”，还要回答“怎样改”。</td><td>生成最小可执行修补建议，形成 Critique → Patch → Post-patch Preference 闭环。</td><td>Patch 编译率<br>Test Improve Rate</td></tr>
+                <tr><th><b>04</b>跨任务检索增强</th><td>如何利用历史任务经验提升新任务泛化？</td><td>从任务描述、数据报告和评估协议中检索相似任务，将高效偏置作为额外上下文。</td><td>Unseen-task Accuracy<br>Retrieval Hit@k</td></tr>
+                <tr class="innovation-table-featured"><th><b>05</b>轻量奖励模型</th><td>如何降低大模型 Judge 的推理成本？</td><td>蒸馏为本地 Pairwise / Process Reward Model，作为可插拔的廉价 Critic。</td><td>ACC / ECE<br>延迟与 Token 成本</td></tr>
+              </tbody>
+            </table>
           </div>
+          <div class="innovation-table-foot"><span>核心变化</span><strong>从“选择谁”扩展到“未来是否值得继续，以及下一步应该怎样改”。</strong></div>
         </div>
       </section>
 
